@@ -80,7 +80,7 @@ define('WPLANG', '');
  */
 define('WP_DEBUG', false);
 
-/* That's all, stop editing! Happy blogging. */
+/** That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
