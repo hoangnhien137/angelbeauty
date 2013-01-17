@@ -98,10 +98,18 @@ a:focus {outline-style: none !important;}
 p {margin: 0px;}
 h1, h2, h3, h4, h5, h6 {margin: 0px;}
 
+@font-face {
+    font-family: 'VNTArab';
+    src: url('fonts/VARABN_2.eot'); /* IE9 Compat Modes */
+    src: url('fonts/VARABN_2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/VARABN_2.woff') format('woff'), /* Modern Browsers */
+         url('fonts/VARABN_2.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/VARABN_2.svg#svgVNTArab') format('svg'); /* Legacy iOS */
+}
+
 body {
-    font-family: Verdana;
+    font-family: Tahoma,Geneva,sans-serif;
     font-size: 12px;
-    background: url("images/bg/bg_body.jpg") no-repeat scroll top center transparent;
 }
 
 .clearfix {
@@ -111,14 +119,145 @@ body {
 #container > header > section.container,
 #container > div#main > section.container,
 #container > footer > section.container {
-    width: 1020px;
+    width: 963px;
     margin: 0 auto;
     position: relative;
 }
 
+#container > header > section.container {
+    height: 260px;
+}
 
+aside#logo {
+    height: 200px;
+    width: 963px;
+}
 
+aside#logo > div {
+    height: 200px;
+    width: 850px;
+    margin: 0 auto;
+}
 
+aside.language {
+    height: 40px;
+    width: 191px;
+    position: absolute;
+    right: 0px;
+    bottom: 48px;
+}
+
+aside.language ul > li {
+    float: left;
+    height: 40px;
+    line-height: 32px;
+}
+
+aside.language ul > li.english {
+    background: url("images/bg_lang.png") no-repeat scroll -103px 0 transparent;
+    width: 88px;
+}
+
+aside.language ul > li.vietnam {
+    background: url("images/bg_lang.png") no-repeat scroll 0 0 transparent;
+    width: 102px;
+    margin-right: 1px;
+}
+
+aside.language ul > li > a {
+    color: #ffff66;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+    padding-left: 35px;
+}
+
+nav#header-menu {
+    height: 40px;
+    width: 963px;
+    position: absolute;
+    bottom: 0px;
+}
+
+nav#header-menu > ul > li {
+    float: left;
+    width: 107px;
+    height: 40px;
+    background: url("images/bg_menu.png") no-repeat scroll 0 0 transparent;
+    line-height: 40px;
+}
+
+nav#header-menu > ul > li > a {
+    font-size: 16px;
+    color: #ffff66;
+    text-transform: uppercase;
+    line-height: 20px;
+    text-align: center;
+    font-family: 'VNTArab';
+    font-weight: 400;
+    display: block;
+    width: 107px;
+    padding-top: 17px;
+    height: 23px;
+}
+
+aside#banner {
+    width: 963px;
+    height: 368px;
+    background-color: #f3c75c;
+}
+
+aside.gallery-carousel {
+    width: 963px;
+    height: 202px;
+    background-color: #f3c75c;
+}
+
+aside.gallery-carousel > ul.galery {
+    height: 194px;
+    width: 954px;
+    padding: 4px 4px 4px 4px;
+}
+
+aside.gallery-carousel > ul.galery > li:first-child {
+    margin-left: 0px;
+}
+
+aside.gallery-carousel > ul.galery > li {
+    width: 177px;
+    height: 184px;
+    float: left;
+    margin-left: 4px;
+    background-color: #e5b540;
+    padding: 5px;
+}
+
+aside.gallery-carousel > ul.galery > li > img {
+    width: 177px;
+    height: 184px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+div#main > section.container > section {
+    width: 941px;
+    background-color: #f3c75c;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+aside.side-bar-left {
+    width: 232px;
+    float: left;
+}
+
+aside.main-content {
+    width: 703px;
+    float: right;
+    border: 1px solid red;
+}
 
 
 /* ==========================================================================
