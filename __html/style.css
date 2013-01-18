@@ -110,6 +110,7 @@ h1, h2, h3, h4, h5, h6 {margin: 0px;}
 body {
     font-family: Tahoma,Geneva,sans-serif;
     font-size: 12px;
+     background: url("images/bg.gif") no-repeat fixed center top transparent;
 }
 
 .clearfix {
@@ -192,7 +193,7 @@ nav#header-menu > ul > li > a {
     font-size: 16px;
     color: #ffff66;
     text-transform: uppercase;
-    line-height: 20px;
+    line-height: 16px;
     text-align: center;
     font-family: 'VNTArab';
     font-weight: 400;
@@ -251,6 +252,7 @@ div#main > section.container > section {
 aside.side-bar-left {
     width: 232px;
     float: left;
+    position: relative;
 }
 
 aside.main-content {
@@ -259,6 +261,285 @@ aside.main-content {
     border: 1px solid red;
 }
 
+aside.side-bar-left > span.bg-top-sidebar {
+    display: block;
+    width: 232px;
+    height: 93px;
+    background: url("images/bg_top-cat.png") no-repeat scroll left top transparent;
+}
+
+aside.side-bar-left > article {
+    width: 232px;
+}
+
+article.cat-spa {
+    height: 38px;
+    background-color: #3e2b02;
+}
+
+article.cat-datcuochen > h1,
+article.cat-congnghe > h1,
+article.cat-dichvu > h1,
+article.cat-spa > h1 {
+    height: 38px;
+    background: url("images/bg_cat-current.png") no-repeat scroll 42% top transparent;
+    width: 232px;
+}
+
+article.cat-datcuochen > h1,
+article.cat-congnghe > h1,
+aside.side-bar-left article.cat-dichvu > h1,
+aside.side-bar-left article > h1 > a {
+    display: block;
+    line-height: 24px;
+    font-family: 'VNTArab';
+    color: #FFFF66;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 3px 0 #1f1603;
+    -moz-text-shadow: 0 3px 0 #1f1603;
+    -webkit-text-shadow: 0 3px 0 #1f1603;
+}
+
+article.cat-dichvu {
+    height: auto;
+    background-color: #3e2b02;
+    padding-top: 8px;
+}
+
+aside.side-bar-left article > ul {
+    width: 195px;
+    padding-left: 37px;
+    height: auto;
+}
+
+aside.side-bar-left article > ul > li {
+    line-height: 28px;
+}
+
+aside.side-bar-left article > ul > li > a {
+    display: block;
+    line-height: 28px;
+    font-family: 'VNTArab';
+    color: #ffcc33;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+article.cat-datcuochen,
+article.cat-hotro,
+article.cat-giaiphau {
+    height: auto;
+    background-color: #3e2b02;
+    padding-top: 15px;
+}
+
+article.cat-hotro > h1,
+article.cat-giaiphau > h1 {
+    width: 232px;
+    height: 74px;
+    display: block;
+    line-height: 93px;
+    font-family: 'VNTArab';
+    color: #FFFF66;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    background: url("images/bg_title-cat.png") no-repeat scroll 42% top transparent;
+    text-transform: uppercase;
+    text-shadow: 0 3px 0 #1f1603;
+    -moz-text-shadow: 0 3px 0 #1f1603;
+    -webkit-text-shadow: 0 3px 0 #1f1603;
+}
+
+article.cat-congnghe {
+    background-color: #3e2b02;
+    padding-top: 15px;
+}
+
+aside.side-bar-left article.cat-hotro > ul > li.yahoo {
+    height: 34px;
+    background: url("images/icon_yahoo.png") no-repeat scroll 5% top transparent;
+    padding-bottom: 10px;
+}
+
+article.cat-hotro > ul > li.yahoo > a {
+    line-height: 34px;
+}
+
+article.cat-hotro > ul > li.skype {
+    height: 31px;
+    background: url("images/icon_skype.png") no-repeat scroll 5% top transparent;
+}
+
+article.cat-hotro > ul > li.skype > a {
+    line-height: 31px;
+}
+
+aside.side-bar-left article.cat-hotro > ul > li > a {
+    font-size: 12px;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-weight: 600;
+    padding-left: 50px;
+    display: block;
+}
+
+article.cat-datcuochen > img {
+    padding-left: 62px;
+}
+
+aside.side-bar-left > article.cat-thoitrang {
+    padding-top: 40px !important;
+}
+
+aside.side-bar-left article.cat-hoidap,
+aside.side-bar-left article.cat-lamdep,
+aside.side-bar-left article.cat-thoitrang {
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 4px;
+    width: 223px;
+    background-color: #3e2b02;
+}
+
+article.cat-hoidap > h1,
+article.cat-lamdep > h1,
+article.cat-thoitrang > h1 {
+    color: #FB0002;
+    font-size: 11px;
+    font-weight: 600;
+    padding-left: 15px;
+    height: 21px;
+    line-height: 21px;
+    background: url("images/bg_title-cat-sub.png") no-repeat scroll left top transparent;
+    text-align: left;
+    text-transform: uppercase;
+    width: 208px;
+}
+
+aside.side-bar-left article.cat-hoidap > ul,
+aside.side-bar-left article.cat-lamdep > ul,
+aside.side-bar-left article.cat-thoitrang > ul {
+    padding: 0px;
+    width: 223px;
+    height: 284px;
+    padding-bottom: 10px;
+    height: auto;
+    background: url("images/bg_content-cat.png") repeat-x scroll left top transparent;
+}
+
+ul.hoidap > li:first-child,
+ul.lamdep > li:first-child,
+ul.thoitrang > li:first-child {
+    margin-top: 0px;
+    padding-top: 10px;
+}
+
+ul.lamdep > li,
+ul.thoitrang > li {
+    height: 50px;
+    margin-top: 6px;
+}
+
+ul.lamdep > li > a,
+ul.thoitrang > li > a {
+    display: block;
+    width: 60px;
+    height: 50px;
+    float: left;
+}
+
+ul.lamdep > li > h1,
+ul.thoitrang > li > h1 {
+    width: 158px;
+    float: right;
+    height: 50px;
+    line-height: 12px !important;
+}
+
+ul.lamdep > li > h1 > a,
+ul.thoitrang > li > h1 > a {
+    color: #FFCC33;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+aside.side-bar-left article.cat-hoidap ul.hoidap > li {
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+aside.side-bar-left article.cat-hoidap ul.hoidap > li > a {
+    color: ##FFCC33;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Tahoma,Geneva,sans-serif;
+    line-height: 14px;
+}
+
+aside.side-bar-left > span.bg-bottom-sidebar {
+     display: block;
+    width: 232px;
+    height: 93px;
+    background: url("images/bg_bottom-cat.png") no-repeat scroll left top transparent;
+}
+
+aside.customer-gallery {
+    width: 963px;
+    background-color: #f3c75c;
+    padding-top: 5px;
+}
+
+aside.customer-gallery > h1 {
+    width: 231px;
+    height: 46px;
+    line-height: 55px;
+    font-family: 'VNTArab';
+    color: #FFFF66;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    background: url("images/bg_customer.png") no-repeat scroll left top transparent;
+    text-transform: uppercase;
+    text-shadow: 0 3px 0 #1f1603;
+    -moz-text-shadow: 0 3px 0 #1f1603;
+    -webkit-text-shadow: 0 3px 0 #1f1603;
+    margin-left: 13px;
+    margin-bottom: 10px;
+}
+
+aside.customer-gallery > ul > li {
+    height: 204px;
+    width: 221px;
+    float: left;
+    margin-left: 3px;
+    background-color: #dfb040;
+    padding: 8px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+aside.customer-gallery > ul > li > a img {
+    height: 204px;
+    width: 221px;
+    background-color: #312001;
+}
+
+footer > section.container {
+    width: 963px;
+    height: 107px;
+    background: url("images/bg_footer.png") no-repeat scroll center bottom #f3c75c;
+}
+
+footer > section.container > h2 {
+     font-family: Tahoma,Geneva,sans-serif;
+    font-size: 12px;
+    color: #000;
+}
 
 /* ==========================================================================
    Helper classes
