@@ -59,7 +59,7 @@ function html5blp_setup() {
     add_theme_support( 'automatic-feed-links' );
 
     // This theme uses wp_nav_menu() in one location.
-    register_nav_menu( 'primary', __( 'Primary Menu', 'html5blp' ) );
+    #register_nav_menu( 'primary', __( 'Primary Menu', 'html5blp' ) );
 
     // Add support for a variety of post formats
     #add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
@@ -87,11 +87,11 @@ function html5blp_setup() {
     #add_image_size( 'slider-530x400', 530, 400, true );
 	
 	/* Register nav menus using register_nav_menu() or register_nav_menus() here. */
-	function base_theme_register_menus() {
-		register_nav_menu( 'top-menu', __( 'Top Menu', 'html5blp' ) );
-	}
+	#function base_theme_register_menus() {
+		#register_nav_menu( 'top-menu', __( 'Top Menu', 'html5blp' ) );
+	#}
 	/* Add your nav menus function to the 'init' action hook. */
-	add_action( 'init', 'base_theme_register_menus' );
+	#add_action( 'init', 'base_theme_register_menus' );
 	
 }
 endif; // html5blp_setup
@@ -453,12 +453,6 @@ function filter_after_admin_init() {
 }
 add_action( 'admin_init', 'filter_after_admin_init');
 
-register_nav_menus(array(
-    'header' => 'Menu Header',
-    'footer' => 'Menu Footer',
-));
-
-
 function wp_trim_words_length($sText, $iNumberWords, $sMore, $iLength = -1) {
     $sText = wp_trim_words($sText, $iNumberWords, '');
     if( $iLength > 0 ) { 
@@ -535,9 +529,6 @@ if (!function_exists('html5blp_comment')) :
 endif; // ends check for html5blp_comment()
 
 
-
-
-
 function handle_login_logo_url() { 
     return get_bloginfo( 'url' ); 
 }
@@ -560,4 +551,6 @@ function handle_login_logo() { ?>
 
 add_action( 'login_enqueue_scripts', 'handle_login_logo' );
 
-
+register_nav_menus(array(
+    'header' => 'Menu Header'
+));

@@ -91,19 +91,17 @@ wp_head();
                             <li class="english"><a href="#">English</a></li>
                         </ul>
                     </aside>
-                    <nav id="header-menu">
-                        <ul class="clearfix">
-                            <li><a href="#">Trang chu</a></li>
-                            <li><a href="#">Gioi thieu</a></li>
-                            <li><a href="#">San pham</a></li>
-                            <li><a href="#">Dich vu</a></li>
-                            <li class="active"><a href="#">Tin tuc</a></li>
-                            <li><a href="#">Hoat dong</a></li>
-                            <li><a href="#">Y kien k/h</a></li>
-                            <li><a href="#">Hoi dap</a></li>
-                            <li><a href="#">Lien he</a></li>
-                        </ul>
-                    </nav> <!--end of nav#top-menu-->
+                     
+                    <?php
+                    $menuHeader = array(
+                        'theme_location' => 'header',
+                        'container' => 'nav',
+                        'container_id' => 'header-menu',
+                        'items_wrap' => '</span><ul class="clearfix">%3$s</ul></span>'
+                    );
+                    wp_nav_menu($menuHeader);
+                    ?> 
+                    <!--end of nav#top-menu-->
                 </section>
             </header><!-- end header -->
 
