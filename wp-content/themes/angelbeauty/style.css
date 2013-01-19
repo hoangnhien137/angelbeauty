@@ -215,8 +215,50 @@ nav#header-menu > ul > li > a {
     -webkit-text-shadow: 0 3px 0 #1f1603;
 }
 
-nav#header-menu > ul > li > a:hover {
+nav#header-menu > ul > li.current-menu-ancestor > a,
+nav#header-menu > ul > li.current-menu-parent > a,
+nav#header-menu > ul > li.current-menu-item > a, 
+nav#header-menu > ul > li.current_page_item > a,
+nav#header-menu > ul > li:hover > a {
     color: #d5a420;
+}
+
+nav#header-menu > ul > li:hover {
+    cursor: pointer;
+}
+
+nav#header-menu > ul > li > ul.sub-menu {
+    display: none;
+}
+
+nav#header-menu > ul > li:hover > ul.sub-menu {
+    display: block;
+    position: relative;
+    z-index: 9999;
+}
+
+nav#header-menu > ul > li > ul.sub-menu {
+    width: 230px;
+    height: auto;
+}
+
+nav#header-menu > ul > li > ul.sub-menu > li {
+    width: 229px;
+    height: 29px;
+    border-right: 1px solid #725108;
+    border-top: 1px solid #725108;
+    background: url("images/bg_li-menu-head.png") repeat scroll left top transparent;
+}
+
+nav#header-menu > ul > li > ul.sub-menu > li > a {
+    display: block;
+    height: 29px;
+    line-height: 24px;
+    padding-left: 10px;
+    color: #FFFF00;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'VNTArab';
 }
 
 aside#banner {
