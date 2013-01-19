@@ -1,0 +1,947 @@
+/*
+Theme Name: ANGELBEAUTY
+Theme URI: http://hoangnhien.net/
+Author: Mr Rony Tran
+Author URI: http://hoangnhien.net/
+Description: The ANGELBEAUTY theme for WordPress.
+Version: 2.0
+License: GNU General Public License
+License URI: license.txt
+Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-menu, editor-style, featured-images, sticky-post, translation-ready
+*/
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+*/
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+*/
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+*/
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+*/
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+*/
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author: Mr Rony (rony@likipe.se)
+   ========================================================================== */
+ul, ol {list-style: none; padding: 0px; margin: 0px;}
+a {text-decoration: none; outline-style: none;}
+a:focus {outline-style: none !important;}
+p {margin: 0px;}
+h1, h2, h3, h4, h5, h6 {margin: 0px;}
+
+@font-face {
+    font-family: 'VNTArab';
+    src: url('fonts/VARABN_2.eot'); /* IE9 Compat Modes */
+    src: url('fonts/VARABN_2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/VARABN_2.woff') format('woff'), /* Modern Browsers */
+        url('fonts/VARABN_2.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('fonts/VARABN_2.svg#svgVNTArab') format('svg'); /* Legacy iOS */
+}
+
+body {
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 12px;
+    background: url("images/bg.gif") no-repeat fixed center top transparent;
+    margin: 0px;
+}
+
+body > img {
+    display: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#container > header > section.container,
+#container > div#main > section.container,
+#container > footer > section.container {
+    width: 963px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#container > header > section.container {
+    height: 260px;
+}
+
+aside#logo {
+    height: 200px;
+    width: 963px;
+}
+
+aside#logo > div {
+    height: 200px;
+    width: 850px;
+    margin: 0 auto;
+}
+
+aside.language {
+    height: 40px;
+    width: 191px;
+    position: absolute;
+    right: 0px;
+    bottom: 48px;
+}
+
+aside.language ul > li {
+    float: left;
+    height: 40px;
+    line-height: 32px;
+}
+
+aside.language ul > li.english {
+    background: url("images/bg_lang.png") no-repeat scroll -103px 0 transparent;
+    width: 88px;
+}
+
+aside.language ul > li.vietnam {
+    background: url("images/bg_lang.png") no-repeat scroll 0 0 transparent;
+    width: 102px;
+    margin-right: 1px;
+}
+
+aside.language ul > li > a {
+    color: #ffff66;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+    padding-left: 35px;
+}
+
+nav#header-menu {
+    height: 40px;
+    width: 963px;
+    position: absolute;
+    bottom: 0px;
+}
+
+nav#header-menu > ul > li {
+    float: left;
+    width: 107px;
+    height: 40px;
+    background: url("images/bg_menu.png") no-repeat scroll 0 0 transparent;
+    line-height: 40px;
+}
+
+nav#header-menu > ul > li > a {
+    font-size: 16px;
+    color: #ffff66;
+    text-transform: uppercase;
+    line-height: 16px;
+    text-align: center;
+    font-family: 'VNTArab';
+    font-weight: 400;
+    display: block;
+    width: 107px;
+    padding-top: 17px;
+    height: 23px;
+    text-shadow: 0 3px 0 #1f1603;
+    -moz-text-shadow: 0 3px 0 #1f1603;
+    -webkit-text-shadow: 0 3px 0 #1f1603;
+}
+
+nav#header-menu > ul > li > a:hover {
+    color: #d5a420;
+}
+
+aside#banner {
+    width: 963px;
+    height: 370px;
+    background-color: #f3c75c;
+}
+
+aside#banner > ul > li {
+    width: 963px;
+    height: 370px;
+}
+
+aside#banner > ul > li > embed {
+    width: 963px;
+    height: 370px;
+}
+
+aside.gallery-carousel {
+    width: 963px;
+    height: 202px;
+    background-color: #f3c75c;
+}
+
+aside.gallery-carousel > ul.galery {
+    height: 194px;
+    width: 954px;
+    padding: 4px 4px 4px 4px;
+}
+
+aside.gallery-carousel > ul.galery > li:first-child {
+    margin-left: 0px;
+}
+
+aside.gallery-carousel > ul.galery > li {
+    width: 177px;
+    height: 184px;
+    float: left;
+    margin-left: 4px;
+    background-color: #e5b540;
+    padding: 5px;
+}
+
+aside.gallery-carousel > ul.galery > li > img {
+    width: 177px;
+    height: 184px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+div#main > section.container > section {
+    width: 945px;
+    background-color: #f3c75c;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 10px;
+}
+
+aside.side-bar-left {
+    width: 232px;
+    float: left;
+    position: relative;
+}
+
+aside.main-content {
+    width: 703px;
+    float: right;
+}
+
+aside.main-content > span.bg-top-content {
+    display: block;
+    width: 703px;
+    height: 85px;
+    background: url("images/bg_top-content.png") no-repeat scroll 0 0 transparent;
+}
+
+aside.main-content > article.content {
+    width: 703px;
+    height: 2072px;
+    background: url("images/bg_content.png") repeat-y scroll left top transparent;
+}
+
+aside.main-content > span.bg-bottom-content {
+    display: block;
+    width: 703px;
+    height: 94px;
+    background: url("images/bg_bottom-content.png") no-repeat scroll 0 0 transparent;
+}
+
+aside.main-content > article.content {
+    width: 703px;
+    position: relative;
+}
+
+aside.main-content > article.content > section {
+    width: 645px;
+    height: auto;
+    position: absolute;
+    left: 32px;
+    top: -56px;
+    z-index: 9999;
+}
+
+article.content > ul.banner-startpage {
+    width: 645px;
+}
+
+ul.banner-startpage > li:first-child {
+    margin-top: 0px;
+}
+
+ul.banner-startpage > li {
+    width: 645px;
+    height: 290px;
+    margin-top: 12px;
+}
+
+div.product-startpage {
+    width: 645px;
+    height: 380px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+div.product-startpage > ul > li:first-child {
+    margin-left: 0px;
+}
+
+div.product-startpage > ul > li {
+    width: 211px;
+    height: 378px;
+    float: left;
+    margin-left: 3px;
+    background: none repeat scroll 0 0 #D4A430;
+    border: 1px solid #A97C0F;
+}
+
+div.product-startpage > ul > li > a.item {
+    display: block;
+    width: 201px;
+    height: 315px;
+    padding: 5px;
+}
+
+div.product-startpage > ul > li > a.add_to_cart_button {
+    display: block;
+    height: 25px;
+    width: 128px;
+    text-indent: -9999px;
+    background: url("images/icon_buy.png") no-repeat scroll 0 0 transparent;
+    margin-left: 20%;
+}
+
+div.product-startpage > ul > li > a > div.background-thumbnail {
+    width: 201px;
+    height: 250px;
+}
+
+div.product-startpage > ul > li > a > h3 {
+    color: #593C09;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 20px 0 5px 0;
+    text-align: center;
+    width: 201px;
+}
+
+div.product-startpage > ul > li > a > span.price {
+    width: 201px;
+    text-align: center;
+    color: #593C09;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 12px;
+    display: block;
+}
+
+div.product-startpage > ul > li > a > span.price > span {
+    color: #B22222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+div.product-startpage > ul > li > a > h3:hover {
+    text-decoration: underline;
+}
+
+div.background-thumbnail > img {
+    width: 201px;
+    height: 250px;
+}
+
+ul.banner-startpage > li > img {
+    width: 645px;
+    height: 290px;
+}
+
+aside.side-bar-left > span.bg-top-sidebar {
+    display: block;
+    width: 232px;
+    height: 93px;
+    background: url("images/bg_top-cat.png") no-repeat scroll left top transparent;
+}
+
+aside.side-bar-left > article {
+    width: 232px;
+}
+
+article.cat-spa {
+    height: 38px;
+    background-color: #3e2b02;
+}
+
+article.cat-datcuochen > h1,
+article.cat-congnghe > h1,
+article.cat-dichvu > h1,
+article.cat-spa > h1 {
+    height: 38px;
+    background: url("images/bg_cat-current.png") no-repeat scroll 42% top transparent;
+    width: 232px;
+}
+
+article.cat-datcuochen > h1,
+article.cat-congnghe > h1,
+aside.side-bar-left article.cat-dichvu > h1,
+aside.side-bar-left article > h1 > a {
+    display: block;
+    line-height: 24px;
+    font-family: 'VNTArab';
+    color: #FFFF66;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 3px 0 #1f1603;
+    -moz-text-shadow: 0 3px 0 #1f1603;
+    -webkit-text-shadow: 0 3px 0 #1f1603;
+}
+
+article.cat-dichvu {
+    height: auto;
+    background-color: #3e2b02;
+    padding-top: 8px;
+}
+
+aside.side-bar-left article > ul {
+    width: 195px;
+    padding-left: 37px;
+    height: auto;
+}
+
+aside.side-bar-left article > ul > li {
+    line-height: 28px;
+}
+
+aside.side-bar-left article > ul > li > a {
+    display: block;
+    line-height: 28px;
+    font-family: 'VNTArab';
+    color: #ffcc33;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+article.cat-datcuochen,
+article.cat-hotro,
+article.cat-giaiphau {
+    height: auto;
+    background-color: #3e2b02;
+    padding-top: 15px;
+}
+
+article.cat-hotro > h1,
+article.cat-giaiphau > h1 {
+    width: 232px;
+    height: 74px;
+    display: block;
+    line-height: 93px;
+    font-family: 'VNTArab';
+    color: #FFFF66;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    background: url("images/bg_title-cat.png") no-repeat scroll 42% top transparent;
+    text-transform: uppercase;
+    text-shadow: 0 3px 0 #1f1603;
+    -moz-text-shadow: 0 3px 0 #1f1603;
+    -webkit-text-shadow: 0 3px 0 #1f1603;
+}
+
+article.cat-congnghe {
+    background-color: #3e2b02;
+    padding-top: 15px;
+}
+
+aside.side-bar-left article.cat-hotro > ul > li.yahoo {
+    height: 34px;
+    background: url("images/icon_yahoo.png") no-repeat scroll 5% top transparent;
+    padding-bottom: 10px;
+}
+
+article.cat-hotro > ul > li.yahoo > a {
+    line-height: 34px;
+}
+
+article.cat-hotro > ul > li.skype {
+    height: 31px;
+    background: url("images/icon_skype.png") no-repeat scroll 5% top transparent;
+}
+
+article.cat-hotro > ul > li.skype > a {
+    line-height: 31px;
+}
+
+aside.side-bar-left article.cat-hotro > ul > li > a {
+    font-size: 12px;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-weight: 600;
+    padding-left: 50px;
+    display: block;
+}
+
+article.cat-datcuochen > img {
+    padding-left: 62px;
+}
+
+aside.side-bar-left > article.cat-thoitrang {
+    padding-top: 40px !important;
+}
+
+aside.side-bar-left article.cat-hoidap,
+aside.side-bar-left article.cat-lamdep,
+aside.side-bar-left article.cat-thoitrang {
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 4px;
+    width: 223px;
+    background-color: #3e2b02;
+}
+
+article.cat-hoidap > h1,
+article.cat-lamdep > h1,
+article.cat-thoitrang > h1 {
+    color: #FB0002;
+    font-size: 11px;
+    font-weight: 600;
+    padding-left: 15px;
+    height: 21px;
+    line-height: 21px;
+    background: url("images/bg_title-cat-sub.png") no-repeat scroll left top transparent;
+    text-align: left;
+    text-transform: uppercase;
+    width: 208px;
+}
+
+aside.side-bar-left article.cat-hoidap > ul,
+aside.side-bar-left article.cat-lamdep > ul,
+aside.side-bar-left article.cat-thoitrang > ul {
+    padding: 0px;
+    width: 223px;
+    height: 284px;
+    padding-bottom: 10px;
+    height: auto;
+    background: url("images/bg_content-cat.png") repeat-x scroll left top transparent;
+}
+
+ul.hoidap > li:first-child,
+ul.lamdep > li:first-child,
+ul.thoitrang > li:first-child {
+    margin-top: 0px;
+    padding-top: 10px;
+}
+
+ul.lamdep > li,
+ul.thoitrang > li {
+    height: 50px;
+    margin-top: 6px;
+}
+
+ul.lamdep > li > a,
+ul.thoitrang > li > a {
+    display: block;
+    width: 60px;
+    height: 50px;
+    float: left;
+}
+
+ul.lamdep > li > h1,
+ul.thoitrang > li > h1 {
+    width: 158px;
+    float: right;
+    height: 50px;
+    line-height: 12px !important;
+}
+
+ul.lamdep > li > h1 > a,
+ul.thoitrang > li > h1 > a {
+    color: #FFCC33;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+aside.side-bar-left article.cat-hoidap ul.hoidap > li {
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+aside.side-bar-left article.cat-hoidap ul.hoidap > li > a {
+    color: #FFCC33;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Tahoma,Geneva,sans-serif;
+    line-height: 14px;
+}
+
+aside.side-bar-left > span.bg-bottom-sidebar {
+    display: block;
+    width: 232px;
+    height: 93px;
+    background: url("images/bg_bottom-cat.png") no-repeat scroll left top transparent;
+}
+
+aside.customer-gallery {
+    width: 963px;
+    background-color: #f3c75c;
+    padding-top: 5px;
+    position: relative;
+}
+
+aside.customer-gallery > h1 {
+    width: 231px;
+    height: 46px;
+    line-height: 55px;
+    font-family: 'VNTArab';
+    color: #FFFF66;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    background: url("images/bg_customer.png") no-repeat scroll left top transparent;
+    text-transform: uppercase;
+    text-shadow: 0 3px 0 #1f1603;
+    -moz-text-shadow: 0 3px 0 #1f1603;
+    -webkit-text-shadow: 0 3px 0 #1f1603;
+    position: absolute;
+    left: 13px;
+    top: -50px;
+}
+
+aside.customer-gallery > ul > li {
+    height: 204px;
+    width: 221px;
+    float: left;
+    margin-left: 3px;
+    background-color: #dfb040;
+    padding: 8px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+aside.customer-gallery > ul > li > a img {
+    height: 204px;
+    width: 221px;
+    background-color: #312001;
+}
+
+footer > section.container {
+    width: 963px;
+    height: 107px;
+    background: url("images/bg_footer.png") no-repeat scroll center bottom #f3c75c;
+}
+
+footer > section.container > h2 {
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 12px;
+    color: #000;
+    float: left;
+    padding-left: 20px;
+    line-height: 107px;
+}
+
+article.logo-footer {
+    height: 55px;
+    width: 345px;
+}
+
+article.logo-footer > ul > li:first-child {
+    margin-left: 0px;
+}
+
+article.logo-footer {
+    position: absolute;
+    left: 300px;
+    top: 15px;
+}
+
+article.logo-footer > ul > li {
+    float: left;
+    margin-left: 15px;
+}
+
+article.logo-footer > ul > li > a {
+    text-indent: -9999px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+article.logo-footer > ul > li.angelflowers {
+    width: 59px;
+    height: 55px;
+    background: url("images/icon_angelflowers.png") no-repeat scroll center center transparent;
+}
+
+article.logo-footer > ul > li.bacsilanda {
+    width: 92px;
+    height: 55px;
+    background: url("images/icon_doctor.png") no-repeat scroll center center transparent;
+}
+
+article.logo-footer > ul > li.angelbeauty {
+    width: 25px;
+    height: 55px;
+    background: url("images/icon_center-footer.png") no-repeat scroll transparent;
+}
+
+article.logo-footer > ul > li.skindoctors {
+    width: 73px;
+    height: 55px;
+    background: url("images/icon_skin-doctor.png") no-repeat scroll center center transparent;
+}
+
+span.coppy-right {
+    float: right;
+    padding-right: 20px;
+    line-height: 107px;
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+*/
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+*/
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+*/
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+*/
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+*/
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+    */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

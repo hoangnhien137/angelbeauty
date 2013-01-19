@@ -1,0 +1,14 @@
+html > body.home {
+    background: url(../images/bg-home-3.png) no-repeat scroll center top #C0C0C0;
+}
+html > body.page,
+html > body.single {
+    background: url(../images/bg-subpage.png) no-repeat scroll center top #C0C0C0;
+}
+#container > * > section.contentWrapper {
+    background-color: transparent;
+}
+html > body.page #main,
+html > body.single #main {
+    margin-top: 3px;
+}
