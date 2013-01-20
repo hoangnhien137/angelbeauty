@@ -1,9 +1,9 @@
 <?php
-/**
- * The template for displaying all pages.
+/*
+ * Template Name: Page Contact
  */
-get_header();
 ?>
+<?php get_header(); ?>
 <?php get_sidebar('banner-carousel'); ?> 
 
 <section class="clearfix">
