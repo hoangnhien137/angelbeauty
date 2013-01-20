@@ -114,6 +114,7 @@ h1, h2, h3, h4, h5, h6 {margin: 0px;}
 body {
     font-family: Tahoma,Geneva,sans-serif;
     font-size: 12px;
+    color: #593C09;
     background: url("images/bg.gif") no-repeat fixed center top transparent;
     margin: 0px;
 }
@@ -829,6 +830,267 @@ section.content-pages > article.title-pages {
 section.content-pages > article.title-pages > a {
     color: #593C09;
 }
+
+div.contact-address {
+    padding-top: 15px;
+}
+
+div.contact-address > ul {
+    list-style: none;
+    padding-left: 13%;
+}
+
+div.contact-address > ul > li {
+    width: 50%;
+    height: auto;
+    float: left;
+    line-height: 20px;
+}
+
+div.contact-address > ul > li.item {
+    text-align: right;
+}
+
+div.google-map-contact {
+    padding-top: 10px;
+}
+
+div.chi-nhanh {
+    padding-top: 25%;
+}
+
+div.chi-nhanh > ul {
+    list-style: none;
+    padding: 0;
+}
+
+div.chi-nhanh > ul > li {
+    height: 38px;
+    background: url("images/bg_title-map.png") no-repeat scroll transparent;
+    color: #FFFF66;
+    font-family: 'VNTArab';
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 0 3px 0 #1F1603;
+    text-transform: uppercase;
+    width: 143px;
+    -moz-text-shadow: 0 3px 0 #1F1603;
+    -webkit-text-shadow: 0 3px 0 #1F1603;
+    cursor: pointer;
+}
+
+div.google-map-contact > div.chi-nhanh {
+    width: 30%;
+    float: left;
+}
+
+div.google-map-contact > div.map-contact {
+    width: 70%;
+    float: right;
+}
+
+div.form-contact {
+    padding-top: 10px;
+}
+
+div.form-contact > h1.your-contact {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+div.form-contact div.lien-he > div.contact-left {
+    width: 50%;
+    height: auto;
+    float: left;
+}
+
+div.contact-left > p.name,
+div.contact-left > p.address,
+div.contact-left > p.email,
+div.contact-left > p.phone {
+    width: 323px;
+}
+
+div.lien-he {
+    padding-top: 10px;
+}
+
+div.contact-left > p {
+    margin-bottom: 5px;
+}
+
+div.contact-right > p > label > span,
+div.contact-left > p > label > span {
+    color: #FF0000;
+}
+
+div.contact-left > p.name > label,
+div.contact-left > p.address > label,
+div.contact-left > p.email > label,
+div.contact-left > p.phone > label {
+    width: 80px;
+    float: left;
+    text-align: right;
+    height: 20px;
+    line-height: 20px;
+}
+
+div.contact-left > p.name > span > input,
+div.contact-left > p.address > span > input,
+div.contact-left > p.email > span > input,
+div.contact-left > p.phone > span > input {
+    width: 208px;
+    padding-left: 17px;
+    border: 1px solid #9A6C08;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+div.contact-left > p.name > span > input {
+    background: url("images/icon_name_people.png") no-repeat scroll 0 0 transparent;
+}
+
+div.contact-left > p.address > span > input {
+    background: url("images/icon_phone_contact.png") no-repeat scroll 0 0 transparent;
+}
+
+div.contact-left > p.email > span > input {
+    background: url("images/icon_email_contact.png") no-repeat scroll 0 0 transparent;
+}
+
+div.contact-left > p.phone > span > input {
+    background: url("images/icon_phone_contact.png") no-repeat scroll 0 0 transparent;
+}
+
+p.name > span > input:focus,
+p.email > span > input:focus,
+p.phone > span > input:focus,
+p.address > span > input:focus {
+    border-color: #4D3304;
+}
+
+p.security > span.ma-bao-ve {
+    color: #FF0000;
+}
+
+p.security > span.info-secu > img {
+    margin-left: 0px;
+}
+
+p.security > span.wpcf7-form-control-wrap {
+    padding-top: 5px;
+    display: block;
+}
+
+p.security > span.wpcf7-form-control-wrap > input {
+    width: 140px;
+    height: 16px;
+    border: 1px solid #9A6C08;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+div.contact-right {
+    position: relative;
+}
+
+div.contact-right > p.send {
+    background: url("images/bg_button.png") repeat-x scroll 0 0 transparent;
+    border: 1px solid #3E2803;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 0.05em rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 0.05em rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 0.05em rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 12px;
+    height: 26px;
+    width: 52px;
+    margin: 5px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    -moz-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    display: block;
+    position: absolute;
+    margin: 0px;
+    bottom: 0px;
+    left: 155px;
+}
+
+div.contact-right > p.send:hover {
+    background: url("images/bg_button_hover.png") repeat-x scroll 0 0 transparent;
+}
+
+p.send > input.wpcf7-submit {
+    padding-left: 20px;
+     background: url("images/icon_send_email.png") no-repeat scroll 2px 100% transparent;
+     border: none;
+     color: #fff;
+     font-weight: 400;
+     cursor: pointer;
+}
+
+p.send > input.wpcf7-submit:focus {
+    background: none repeat scroll 0 0 #EDF7FD;
+    border-color: #4D3304;
+}
+
+p.send > img.ajax-loader {
+    margin: 10px 0 0 18px !important;
+}
+
+p.message > span > textarea {
+    width: 321px;
+    border: 1px solid #9A6C08;
+    height: 110px;
+}
+
+p.message > span > textarea:focus {
+    background: none repeat scroll 0 0 #EDF7FD;
+    border-color: #4D3304;
+}
+
+div.contact-left > p.name > span.wpcf7-form-control-wrap,
+div.contact-left > p.address > span.wpcf7-form-control-wrap,
+div.contact-left > p.email > span.wpcf7-form-control-wrap,
+div.contact-left > p.phone > span.wpcf7-form-control-wrap {
+    width: 232px;
+    float: right;
+    display: block;
+    height: 20px;
+}
+
+div.form-contact div.lien-he > div.contact-right {
+    width: 50%;
+    height: auto;
+    float: right;
+}
+
+div.form-contact > h2 {
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 323px;
+    padding-top: 10px;
+}
+
+div.form-contact > h2 > span {
+    color: #FF0000;
+}
+
+article.main-contact > p.thumb-map {
+    padding-top: 10px;
+}
+
+
 
 /*_______________END CONTENT PAGES_______________*/
 
