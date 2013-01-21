@@ -393,32 +393,32 @@ div.product-startpage {
     overflow: hidden;
 }
 
-div.product-startpage > ul {
+div#carousellite > ul {
     height: 380px !important;
     overflow: hidden !important;
 }
 
-div.product-startpage > ul > li:first-child {
+/*div#carousellite > ul > li:first-child {
     margin-left: 0px;
-}
+}*/
 
-div.product-startpage > ul > li {
+div#carousellite > ul > li {
     width: 211px;
     height: 378px;
     float: left;
-    margin-left: 3px;
+    margin-right: 3px;
     background: none repeat scroll 0 0 #D4A430;
     border: 1px solid #A97C0F;
 }
 
-div.product-startpage > ul > li > a.item {
+div#carousellite > ul > li > a.item {
     display: block;
     width: 201px;
     height: 315px;
     padding: 5px;
 }
 
-div.product-startpage > ul > li > a.add_to_cart_button {
+div#carousellite > ul > li > a.add_to_cart_button {
     display: block;
     height: 25px;
     width: 128px;
@@ -427,12 +427,12 @@ div.product-startpage > ul > li > a.add_to_cart_button {
     margin-left: 20%;
 }
 
-div.product-startpage > ul > li > a > div.background-thumbnail {
+div#carousellite > ul > li > a > div.background-thumbnail {
     width: 201px;
     height: 250px;
 }
 
-div.product-startpage > ul > li > a > h3 {
+div#carousellite > ul > li > a > h3 {
     color: #593C09;
     font-weight: 600;
     font-size: 14px;
@@ -441,7 +441,7 @@ div.product-startpage > ul > li > a > h3 {
     width: 201px;
 }
 
-div.product-startpage > ul > li > a > span.price {
+div#carousellite > ul > li > a > span.price {
     width: 201px;
     text-align: center;
     color: #593C09;
@@ -450,13 +450,13 @@ div.product-startpage > ul > li > a > span.price {
     display: block;
 }
 
-div.product-startpage > ul > li > a > span.price > span {
+div#carousellite > ul > li > a > span.price > span {
     color: #B22222;
     font-size: 14px;
     font-weight: 600;
 }
 
-div.product-startpage > ul > li > a > h3:hover {
+div#carousellite > ul > li > a > h3:hover {
     text-decoration: underline;
 }
 
@@ -727,7 +727,19 @@ aside.customer-gallery > h1 {
     top: -50px;
 }
 
-aside.customer-gallery > ul > li {
+aside.customer-gallery > div#customer-carousel {
+    width: 963px !important;
+    height: 220px;
+    overflow: hidden;
+}
+
+div#customer-carousel > ul {
+    height: 220px;
+    overflow: hidden;
+    width: 963px;
+}
+
+aside.customer-gallery > div > ul > li {
     height: 204px;
     width: 221px;
     float: left;
@@ -739,7 +751,7 @@ aside.customer-gallery > ul > li {
     -webkit-border-radius: 5px;
 }
 
-aside.customer-gallery > ul > li > a img {
+aside.customer-gallery > div > ul > li > a img {
     height: 204px;
     width: 221px;
     background-color: #312001;

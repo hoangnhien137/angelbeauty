@@ -79,5 +79,12 @@ jQuery(document).ready(function($){
         auto: 3000,
         speed: 2000
     });
+    
+    $('div#customer-carousel').jCarouselLite({
+        vertical: false,
+        visible: 5,
+        auto: 3000,
+        speed: 2000
+    });
 
 });

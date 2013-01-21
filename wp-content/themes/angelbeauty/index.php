@@ -36,81 +36,83 @@ global $sTemplateURL;
                         </div>
                     </li>
                 </ul>
-                <div id="carousellite" class="product-startpage">
-                    <ul class="products clearfix">
-                        <li class="product">
-                            <a class="item" href="#">
-                                <div class="background-thumbnail"> 
-                                    <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
-                                </div>
-                                <h3>Younger Hands</h3>
-                                <span class="price">
-                                    Gia ban: <span class="amount">1.848.000 VND</span>
-                                </span>
-                            </a>
-                            <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
-                        </li>
-                        <li class="product">
-                            <a class="item" href="#">
-                                <div class="background-thumbnail"> 
-                                    <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
-                                </div>
-                                <h3>Younger Hands</h3>
-                                <span class="price">
-                                    Gia ban: <span class="amount">1.848.000 VND</span>
-                                </span>
-                            </a>
-                            <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
-                        </li>
-                        <li class="product">
-                            <a class="item" href="#">
-                                <div class="background-thumbnail"> 
-                                    <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
-                                </div>
-                                <h3>Younger Hands</h3>
-                                <span class="price">
-                                    Gia ban: <span class="amount">1.848.000 VND</span>
-                                </span>
-                            </a>
-                            <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
-                        </li>
-                        <li class="product">
-                            <a class="item" href="#">
-                                <div class="background-thumbnail"> 
-                                    <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
-                                </div>
-                                <h3>Younger Hands</h3>
-                                <span class="price">
-                                    Gia ban: <span class="amount">1.848.000 VND</span>
-                                </span>
-                            </a>
-                            <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
-                        </li>
-                        <li class="product">
-                            <a class="item" href="#">
-                                <div class="background-thumbnail"> 
-                                    <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
-                                </div>
-                                <h3>Younger Hands</h3>
-                                <span class="price">
-                                    Gia ban: <span class="amount">1.848.000 VND</span>
-                                </span>
-                            </a>
-                            <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
-                        </li>
-                        <li class="product">
-                            <a class="item" href="#">
-                                <div class="background-thumbnail"> 
-                                    <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
-                                </div>
-                                <h3>Younger Hands</h3>
-                                <span class="price">
-                                    Gia ban: <span class="amount">1.848.000 VND</span>
-                                </span>
-                            </a>
-                            <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
-                        </li>
-                    </ul>
+                <div class="product-startpage">
+                    <div id="carousellite">
+                        <ul class="products clearfix">
+                            <li class="product">
+                                <a class="item" href="#">
+                                    <div class="background-thumbnail"> 
+                                        <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
+                                    </div>
+                                    <h3>Younger Hands</h3>
+                                    <span class="price">
+                                        Gia ban: <span class="amount">1.848.000 VND</span>
+                                    </span>
+                                </a>
+                                <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
+                            </li>
+                            <li class="product">
+                                <a class="item" href="#">
+                                    <div class="background-thumbnail"> 
+                                        <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
+                                    </div>
+                                    <h3>Younger Hands</h3>
+                                    <span class="price">
+                                        Gia ban: <span class="amount">1.848.000 VND</span>
+                                    </span>
+                                </a>
+                                <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
+                            </li>
+                            <li class="product">
+                                <a class="item" href="#">
+                                    <div class="background-thumbnail"> 
+                                        <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
+                                    </div>
+                                    <h3>Younger Hands</h3>
+                                    <span class="price">
+                                        Gia ban: <span class="amount">1.848.000 VND</span>
+                                    </span>
+                                </a>
+                                <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
+                            </li>
+                            <li class="product">
+                                <a class="item" href="#">
+                                    <div class="background-thumbnail"> 
+                                        <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
+                                    </div>
+                                    <h3>Younger Hands</h3>
+                                    <span class="price">
+                                        Gia ban: <span class="amount">1.848.000 VND</span>
+                                    </span>
+                                </a>
+                                <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
+                            </li>
+                            <li class="product">
+                                <a class="item" href="#">
+                                    <div class="background-thumbnail"> 
+                                        <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
+                                    </div>
+                                    <h3>Younger Hands</h3>
+                                    <span class="price">
+                                        Gia ban: <span class="amount">1.848.000 VND</span>
+                                    </span>
+                                </a>
+                                <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
+                            </li>
+                            <li class="product">
+                                <a class="item" href="#">
+                                    <div class="background-thumbnail"> 
+                                        <img src="<?php echo $sTemplateURL; ?>/images/product.jpg">
+                                    </div>
+                                    <h3>Younger Hands</h3>
+                                    <span class="price">
+                                        Gia ban: <span class="amount">1.848.000 VND</span>
+                                    </span>
+                                </a>
+                                <a class="button add_to_cart_button product_type_simple added" rel="nofollow" href="#">Buy</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                <ul class="banner-startpage">
                     <li>
