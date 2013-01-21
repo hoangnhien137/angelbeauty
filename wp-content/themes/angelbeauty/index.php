@@ -5,6 +5,7 @@
 get_header();
 global $sTemplateURL;
 ?>
+
 <?php get_sidebar('banner-carousel'); ?> 
 
 <section class="clearfix">
