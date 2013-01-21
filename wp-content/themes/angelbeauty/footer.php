@@ -35,9 +35,9 @@ $sTemplateURL = get_template_directory_uri();
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery<?php echo HTML_MODE; ?>.js"></script>
 <script>window.jQuery || document.write('<script src="<?php echo $sTemplateURL; ?>/js/vendor/jquery-1.8.3<?php echo HTML_MODE; ?>.js"><\/script>')</script>
 
-
+<script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/libs/jquery.cycle.all.js"></script>
 <script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/plugins.js?v=1"></script>
-<script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/script.js?v=1"></script>
+<script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/script.js?v=2.0"></script>
 
 <?php wp_footer(); ?>
 

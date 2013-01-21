@@ -303,9 +303,15 @@ aside.gallery-carousel > ul.galery > li {
     padding: 5px;
 }
 
-aside.gallery-carousel > ul.galery > li > img {
-    width: 177px;
-    height: 184px;
+aside.gallery-carousel > ul.galery > li > div {
+    width: 177px !important;
+    height: 184px !important;
+    overflow: hidden;
+}
+
+aside.gallery-carousel > ul.galery > li > div > img {
+/*    width: 177px !important;
+    height: 184px !important;*/
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;

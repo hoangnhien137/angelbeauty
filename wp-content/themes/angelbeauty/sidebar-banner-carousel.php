@@ -9,19 +9,49 @@
 <aside class="gallery-carousel">
     <ul class="galery clearfix">
         <li>
-            <img src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
+            <div id="zoom" class="pics">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
+            </div>
         </li>
         <li>
-            <img src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
+            <div id="gallery-2" class="pics">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
+            </div>
         </li>
         <li>
-            <img src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
+            <div id="gallery-3" class="pics">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
+            </div>
         </li>
         <li>
-            <img src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
+            <div id="gallery-4" class="pics">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
+            </div>
         </li>
         <li>
-            <img src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
+            <div id="gallery-5" class="pics">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
+                <img src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
+            </div>
         </li>
     </ul>
 </aside> <!-- end of aside.gallery-carousel -->
