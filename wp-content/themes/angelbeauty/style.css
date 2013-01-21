@@ -273,7 +273,7 @@ aside#banner > ul > li {
     height: 370px;
 }
 
-aside#banner > ul > li > embed {
+aside#banner > ul > li > a > embed {
     width: 963px;
     height: 370px;
 }
@@ -382,13 +382,20 @@ ul.banner-startpage > li {
     width: 645px;
     height: 290px;
     margin-top: 12px;
+    overflow: hidden;
 }
 
 div.product-startpage {
-    width: 645px;
+    width: 645px !important;
     height: 380px;
     margin-top: 5px;
     margin-bottom: 15px;
+    overflow: hidden;
+}
+
+div.product-startpage > ul {
+    height: 380px !important;
+    overflow: hidden !important;
 }
 
 div.product-startpage > ul > li:first-child {
@@ -458,7 +465,12 @@ div.background-thumbnail > img {
     height: 250px;
 }
 
-ul.banner-startpage > li > img {
+/*ul.banner-startpage > li > img {
+    width: 645px;
+    height: 290px;
+}*/
+
+ul.banner-startpage > li > div {
     width: 645px;
     height: 290px;
 }

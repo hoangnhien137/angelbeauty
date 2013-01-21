@@ -48,5 +48,36 @@ jQuery(document).ready(function($){
         }, 
         delay: -3000 
     });
+    
+    $('div#content-banner-1').cycle({
+        delay: -2000
+    });
+    
+    $('div#content-banner-2').cycle({
+        delay: -4000
+    });
+    
+    $('div#content-banner-3').cycle({
+        delay: -6000
+    });
+    
+    $('div#content-banner-4').cycle({
+        delay: -6000
+    });
+    
+    $('div#content-banner-5').cycle({
+        delay: -4000
+    });
+    
+    $('div#content-banner-6').cycle({
+        delay: -2000
+    });
+    
+    $('div#carousellite').jCarouselLite({
+        vertical: false,
+        visible: 4,
+        auto: 3000,
+        speed: 2000
+    });
 
 });
