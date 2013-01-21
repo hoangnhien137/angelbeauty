@@ -425,6 +425,14 @@ div#carousellite > ul > li > a.add_to_cart_button {
     text-indent: -9999px;
     background: url("images/icon_buy.png") no-repeat scroll 0 0 transparent;
     margin-left: 20%;
+    border: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+div#carousellite > ul > li > a.add_to_cart_button.added:before {
+    background: none !important;
 }
 
 div#carousellite > ul > li > a > div.background-thumbnail {
@@ -461,8 +469,8 @@ div#carousellite > ul > li > a > h3:hover {
 }
 
 div.background-thumbnail > img {
-    width: 201px;
-    height: 250px;
+    width: 201px !important;
+    height: 250px !important;
 }
 
 /*ul.banner-startpage > li > img {

@@ -554,3 +554,26 @@ add_action( 'login_enqueue_scripts', 'handle_login_logo' );
 register_nav_menus(array(
     'header' => 'Menu Header'
 ));
+
+
+add_filter( 'woocommerce_currencies', 'add_my_currency' );
+ 
+function add_my_currency( $currencies ) {
+     $currencies['Đồng'] = __( 'Viet Nam Dong (VND)', 'woocommerce' );
+     return $currencies;
+}
+ 
+add_filter('woocommerce_currency_symbol', 'add_my_currency_symbol', 10, 2);
+ 
+function add_my_currency_symbol( $currency_symbol, $currency ) {
+     switch( $currency ) {
+          case 'Đồng': $currency_symbol = ' VND'; break;
+     }
+     return $currency_symbol;
+}
+
+if (function_exists('add_image_size')) {
+    add_image_size('thumb-products', 201, 250, false); //(no cropped)
+}
+
+
