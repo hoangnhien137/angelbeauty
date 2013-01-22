@@ -881,6 +881,91 @@ section.content-pages > article.title-pages {
     padding-left: 5px;
 }
 
+article.category-products {
+    width: 100%;
+    height: auto;
+}
+
+article.category-products > ul.products {
+    padding: 0px;
+}
+
+article.category-products > ul.products > li:nth-child(3n+1) {
+    margin-left: 0px !important;
+}
+
+article.category-products > ul.products > li {
+    width: 209px;
+    height: 266px;
+    margin: 0 0px 6px 6px !important;
+    float: left;
+    background: none repeat scroll 0 0 #D4A430;
+    border: 1px solid #A97C0F;
+}
+
+article.category-products > ul.products > li > a.item {
+    padding: 5px;
+    height: 220px;
+    display: block;
+    width: 199px;
+}
+
+article.category-products > ul.products > li > a.item > h3 {
+    color: #593C09;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    width: 199px;
+}
+
+div.background-thumbnail-product > img,
+div.background-thumbnail-product {
+    width: 199px !important;
+    height: 142px !important;
+}
+
+article.category-products > ul.products > li > a.item > span.price {
+    color: #593C09;
+    display: block;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 12px;
+    text-align: center;
+    width: 199px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+article.category-products > ul.products > li > a.item:hover > h3 {
+    text-decoration: underline;
+}
+
+article.category-products > ul.products > li > a.add_to_cart_button {
+    background: url("images/icon_buy.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    display: block;
+    height: 25px;
+    margin-left: 20%;
+    text-indent: -9999px;
+    width: 128px;
+}
+
+article.category-products > ul.products > li > a.add_to_cart_button.added:before {
+    right: -10px;
+}
+
+article.category-products > ul.products > li > a.item > span.price > span {
+    color: #B22222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+div.pagingbox > div.wp-pagenavi {
+    float: right;
+}
+
 section.content-pages > article.title-pages > a {
     color: #593C09;
 }

@@ -574,6 +574,10 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 
 if (function_exists('add_image_size')) {
     add_image_size('thumb-products', 201, 250, false); //(no cropped)
+    add_image_size('thumb-products-cat', 199, 142, false); //(no cropped)
 }
+
+// Display 12 products per page
+add_filter('loop_shop_per_page', create_function('$cols', 'return 12;'));
 
 

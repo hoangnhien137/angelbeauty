@@ -54,7 +54,7 @@ global $sTemplateURL;
                                     </div>
                                     <h3><?php the_title(); ?></h3>
                                     <?php if ($price_html = $product->get_price_html()) : ?>
-                                        <span class="price"><?php echo $price_html; ?></span>
+                                    <span class="price"><?php _e("Giá bán: ") ?><?php echo $price_html; ?></span>
                                     <?php endif; ?>
                                 </a>
                                 <?php
