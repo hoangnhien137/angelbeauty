@@ -966,6 +966,38 @@ div.pagingbox > div.wp-pagenavi {
     float: right;
 }
 
+article.shopping_bag {
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+article.shopping_bag > a {
+    color: #593C09;
+    font-weight: 600;
+}
+
+article.shopping_bag > a:hover {
+    text-decoration: underline;
+}
+
+article.cart-checkout {
+    padding-top: 15px;
+}
+
+table.shop_table.cart tr > td > a {
+    color: #593C09;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-weight: 400;
+}
+
+table.shop_table.cart tr > td > a:hover {
+    font-weight: 600;
+}
+
+form.shipping_calculator {
+    display: none;
+}
+ 
 section.content-pages > article.title-pages > a {
     color: #593C09;
 }

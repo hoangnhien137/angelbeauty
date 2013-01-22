@@ -13,8 +13,8 @@ global $sTemplateURL;
         <span class="bg-top-content"></span>
         <article class="content">
             <section class="content-pages">
-                <article class="cart-checkout">
-                    
+                <article class="shopping_bag">
+                    <?php woo_nav_before(); ?>
                 </article>
                 <article class="title-pages">
                     <?php include('breadcrumb.php'); ?>

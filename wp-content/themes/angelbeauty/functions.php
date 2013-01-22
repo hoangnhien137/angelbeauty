@@ -581,3 +581,186 @@ if (function_exists('add_image_size')) {
 add_filter('loop_shop_per_page', create_function('$cols', 'return 12;'));
 
 
+
+/*_______________________________________________________________begin Card and Check out of WOO by Rony___________________________________________________________________*/
+if ( ! function_exists( 'woo_do_atomic' ) ) {
+	function woo_do_atomic( $tag = '', $args = '' ) {
+		
+		if ( !$tag ) { return false; } // End IF Statement
+	
+		/* Do actions on the basic hook. */
+		do_action( $tag, $args );
+	
+		/* Loop through context array and fire actions on a contextual scale. */
+		foreach ( (array) woo_get_query_context() as $context ) {
+		
+			do_action( "{$tag}_{$context}", $args );
+			
+		} // End FOREACH Loop
+			
+	} // End woo_do_atomic()
+} // End IF Statement
+
+function woo_nav_before() { woo_do_atomic( 'woo_nav_before' ); }
+
+
+// Add the cart link to the header
+add_action('woo_nav_before', 'artificer_header_cart_link', 10);
+if ( ! function_exists( 'artificer_header_cart_link' ) ) {
+	function artificer_header_cart_link() {
+		if ( class_exists( 'woocommerce' ) ) { echo current(woocommerce_cart_link()); }
+	}
+}
+
+// Add the checkout link to the header
+/*
+add_action('woo_nav_before', 'artificer_header_checkout_link',20);
+if ( ! function_exists( 'artificer_header_checkout_link' ) ) {
+	function artificer_header_checkout_link() { 
+	global $woocommerce;
+        #var_dump(__LINE__, __FILE__, $woocommerce->cart->get_cart_url());
+	?>
+	<a href="<?php echo $woocommerce->cart->get_checkout_url()?>" class="checkout"><span class="lozenge"><?php _e('Check out','woothemes') ?></span></a>
+	<?php }
+}*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* AJAX FRAGMENTS */
+/*-------------------------------------------------------------------------------------------*/
+
+// Handle cart in header fragment for ajax add to cart
+add_filter('add_to_cart_fragments', 'woocommerce_cart_link');
+
+function woocommerce_cart_link() {
+	global $woocommerce;
+	
+	ob_start();
+	#var_dump(__LINE__, __FILE__, $woocommerce->cart->get_cart_url());
+	?>
+	<a href="<?php echo $woocommerce->cart->get_cart_url()?>" title="<?php echo sprintf(_n('%d sản  phẩm', '%d sản phẩm', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> <?php _e('trong giỏ hàng của bạn', 'woothemes'); ?>" class="cart-button">
+	<span class="label"><?php _e('Giỏ hàng: ', 'woothemes'); ?></span>
+	<?php #echo $woocommerce->cart->get_cart_total();  ?>
+    <span class="items"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count); ?> <?php _e("sản phẩm") ?></span>
+	</a>
+	<?php
+	
+	$fragments['a.cart-button'] = ob_get_clean();
+	
+	return $fragments;
+	
+}
+
+
+
+if ( ! function_exists( 'woo_get_query_context' ) ) {
+	function woo_get_query_context() {
+		global $wp_query, $query_context;
+		
+		/* If $query_context->context has been set, don't run through the conditionals again. Just return the variable. */
+		if ( isset( $query_context->context ) && is_array( $query_context->context ) ) {
+		
+			return $query_context->context;
+		
+		} // End IF Statement
+		
+		$query_context = new stdClass();
+		$query_context->context = array();
+	
+		/* Front page of the site. */
+		if ( is_front_page() ) {
+		
+			$query_context->context[] = 'home';
+			
+		} // End IF Statement
+	
+		/* Blog page. */
+		if ( is_home() && ! is_front_page() ) {
+		
+			$query_context->context[] = 'blog';
+	
+		/* Singular views. */
+		} elseif ( is_singular() ) {
+		
+			$query_context->context[] = 'singular';
+			$query_context->context[] = "singular-{$wp_query->post->post_type}";
+		
+			/* Page Templates. */
+			if ( is_page_template() ) {
+			
+				$to_skip = array( 'page', 'post' );
+			
+				$page_template = basename( get_page_template() );
+				$page_template = str_replace( '.php', '', $page_template );
+				$page_template = str_replace( '.', '-', $page_template );
+			
+				if ( $page_template && ! in_array( $page_template, $to_skip ) ) {
+			
+					$query_context->context[] = $page_template;
+					
+				} // End IF Statement
+				
+			} // End IF Statement
+			
+			$query_context->context[] = "singular-{$wp_query->post->post_type}-{$wp_query->post->ID}";
+		}
+	
+		/* Archive views. */
+		elseif ( is_archive() ) {
+			$query_context->context[] = 'archive';
+	
+			/* Taxonomy archives. */
+			if ( is_tax() || is_category() || is_tag() ) {
+				$term = $wp_query->get_queried_object();
+				$query_context->context[] = 'taxonomy';
+				$query_context->context[] = $term->taxonomy;
+				$query_context->context[] = "{$term->taxonomy}-" . sanitize_html_class( $term->slug, $term->term_id );
+			}
+	
+			/* User/author archives. */
+			elseif ( is_author() ) {
+				$query_context->context[] = 'user';
+				$query_context->context[] = 'user-' . sanitize_html_class( get_the_author_meta( 'user_nicename', get_query_var( 'author' ) ), $wp_query->get_queried_object_id() );
+			}
+	
+			/* Time/Date archives. */
+			else {
+				if ( is_date() ) {
+					$query_context->context[] = 'date';
+					if ( is_year() )
+						$query_context->context[] = 'year';
+					if ( is_month() )
+						$query_context->context[] = 'month';
+					if ( get_query_var( 'w' ) )
+						$query_context->context[] = 'week';
+					if ( is_day() )
+						$query_context->context[] = 'day';
+				}
+				if ( is_time() ) {
+					$query_context->context[] = 'time';
+					if ( get_query_var( 'hour' ) )
+						$query_context->context[] = 'hour';
+					if ( get_query_var( 'minute' ) )
+						$query_context->context[] = 'minute';
+				}
+			}
+		}
+	
+		/* Search results. */
+		elseif ( is_search() ) {
+			$query_context->context[] = 'search';
+	
+		/* Error 404 pages. */
+		} elseif ( is_404() ) {
+			$query_context->context[] = 'error-404';
+	
+		} // End IF Statement
+		
+		return $query_context->context;
+	
+	} // End woo_get_query_context()
+} // End IF Statement
+
+
+
+/*_______________________________________________________________end Card and Check out of WOO by Rony___________________________________________________________________*/
