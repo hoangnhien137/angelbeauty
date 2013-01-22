@@ -228,14 +228,23 @@ nav#header-menu > ul > li:hover {
     cursor: pointer;
 }
 
+nav#header-menu > ul > li > ul.sub-menu > li > ul.sub-menu,
 nav#header-menu > ul > li > ul.sub-menu {
     display: none;
 }
 
+nav#header-menu > ul > li > ul.sub-menu > li:hover > ul.sub-menu,
 nav#header-menu > ul > li:hover > ul.sub-menu {
     display: block;
     position: relative;
     z-index: 9999;
+}
+
+nav#header-menu > ul > li > ul.sub-menu > li > ul.sub-menu {
+    margin-left: 229px;
+    width: 230px;
+    height: auto;
+    margin-top: -30px;
 }
 
 nav#header-menu > ul > li > ul.sub-menu {
@@ -243,6 +252,7 @@ nav#header-menu > ul > li > ul.sub-menu {
     height: auto;
 }
 
+nav#header-menu > ul > li > ul.sub-menu > li > ul.sub-menu > li,
 nav#header-menu > ul > li > ul.sub-menu > li {
     width: 229px;
     height: 29px;
@@ -251,6 +261,7 @@ nav#header-menu > ul > li > ul.sub-menu > li {
     background: url("images/bg_li-menu-head.png") repeat scroll left top transparent;
 }
 
+nav#header-menu > ul > li > ul.sub-menu > li > ul.sub-menu > li > a,
 nav#header-menu > ul > li > ul.sub-menu > li > a {
     display: block;
     height: 29px;
@@ -260,6 +271,11 @@ nav#header-menu > ul > li > ul.sub-menu > li > a {
     font-size: 15px;
     font-weight: 400;
     font-family: 'VNTArab';
+}
+
+nav#header-menu > ul > li > ul.sub-menu > li > ul.sub-menu > li > a:hover,
+nav#header-menu > ul > li > ul.sub-menu > li > a:hover {
+    background-color: #e5b540;
 }
 
 aside#banner {
