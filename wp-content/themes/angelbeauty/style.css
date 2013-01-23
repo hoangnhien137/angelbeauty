@@ -991,7 +991,13 @@ table.shop_table.cart tr > td > a {
 }
 
 table.shop_table.cart tr > td > a:hover {
-    font-weight: 600;
+    text-decoration: underline;
+}
+
+article.cart-checkout > p > a.button {
+    margin-top: 20px;
+    display: block;
+    width: 136px;
 }
 
 form.shipping_calculator {
@@ -1261,9 +1267,100 @@ article.main-contact > p.thumb-map {
     padding-top: 10px;
 }
 
-
-
 /*_______________END CONTENT PAGES_______________*/
+
+/*________________CHECK OUT_________________*/
+
+article.page-checkout {
+    padding-top: 15px;
+}
+
+div.col-1 > h3 {
+    text-transform: uppercase;
+    color: #564D41;
+}
+
+div.col-1 > p > input {
+    height: 35px;
+    line-height: 35px;
+    width: 206px;
+    background-color: #FFFFFF;
+    border-color: #DFDFDF;
+    color: #333333;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-left: 5px;
+}
+
+div.col-1 > p > label {
+    color: #564D41;
+    font-weight: bold;
+} 
+
+div.col-2 > h3 {
+    text-transform: uppercase;
+    color: #564D41;
+}
+
+div.col-2 > p > label {
+    color: #564D41;
+    font-weight: bold;
+}
+
+div.col-2 > p > label.checkbox {
+    color: #564D41;
+}
+
+div.shipping_address > p > input {
+    height: 35px;
+    line-height: 35px;
+    width: 206px;
+    background-color: #FFFFFF;
+    border-color: #DFDFDF;
+    color: #333333;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-left: 5px;
+}
+
+div.col-2 > p > textarea {
+    height: 100px;
+    line-height: 35px;
+/*    width: 206px;*/
+    background-color: #FFFFFF;
+    border-color: #DFDFDF;
+    color: #333333;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-left: 5px;
+}
+
+h3#order_review_heading {
+    text-transform: uppercase;
+    color: #564D41;
+}
+
+/*________________END CHECK OUT_________________*/
+
+
 
 /* ==========================================================================
    Helper classes

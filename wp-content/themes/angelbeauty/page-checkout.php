@@ -16,7 +16,11 @@ get_header();
                     <?php include('breadcrumb.php'); ?>
                 </article>
                 <article class="page-checkout">
-                    
+                   <?php
+                    while (have_posts()) : the_post();
+                        the_content();
+                    endwhile;
+                    ?> 
                 </article>
             </section>
         </article>
