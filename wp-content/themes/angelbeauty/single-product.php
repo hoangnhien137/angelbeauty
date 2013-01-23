@@ -12,6 +12,11 @@ get_header();
         <span class="bg-top-content"></span>
         <article class="content">
             <section class="content-pages">
+                <?php
+                if (is_tax('product_cat')) {
+                    $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+                }
+                ?> 
                 <article class="shopping_bag">
                     <?php woo_nav_before(); ?>
                 </article>
@@ -21,8 +26,6 @@ get_header();
                 <?php while (have_posts()) : the_post(); ?>
                 <?php global $product; ?>
                 <?php $thumbID = $product->product_custom_fields['_thumbnail_id'][0]; ?>
-                <?php $fRegularPrice = $product->product_custom_fields['_regular_price'][0]; ?>
-                <?php $currency_symbol = get_woocommerce_currency_symbol(); ?>
                 <article class="main-product-detail">
                     <section class="clearfix">
                         <div class="images">
@@ -65,8 +68,48 @@ get_header();
                     <div class="information_detail">
                         <?php the_content(); ?>
                     </div>
+                    <div class="comment-products">
+                        <?php comments_template(); ?>
+                    </div>
                 </article>
                 <?php endwhile; ?>
+                <article class="related-products">
+                    <h1><?php _e("Các sản phẩm khác") ?></h1>
+                    <div class="list-related-products">
+                        <ul class="products">
+                            <?php query_posts("orderby=DESC&post_type=product&post_status=publish&showposts=-1&taxonomy=product_cat&term={$term->slug}"); ?>
+                            <?php $index = 0; ?>
+                            <?php while (have_posts()) : the_post(); ?>
+                                <?php global $product; ?>
+                                <li class="product<?php if ($index % 3 == 0) echo ' item-left'; ?>">
+                                    <?php $index++; ?>
+                                    <a class="item" href="<?php the_permalink(); ?>">
+                                        <h3><?php the_title(); ?></h3>
+                                        <div class="background-thumbnail-product"> 
+                                            <?php
+                                            if (has_post_thumbnail()) {
+                                                the_post_thumbnail('thumb-products-cat');
+                                            }
+                                            ?>
+                                        </div>
+                                        <?php if ($price_html = $product->get_price_html()) : ?>
+                                            <span class="price"><?php _e("Giá bán: ") ?><?php echo $price_html; ?></span>
+                                        <?php endif; ?>
+                                    </a>
+                                    <?php
+                                    $link = $product->add_to_cart_url();
+                                    $label = apply_filters('add_to_cart_text', __('Buy', 'woocommerce'));
+
+                                    $link = add_query_arg('variation_id', $variation->variation_id, $link);
+
+                                    printf('<a href="%s" rel="nofollow" data-product_id="%s" class="button add_to_cart_button product_type_%s">%s</a>', esc_url($link), $product->id, $product->product_type, $label);
+                                    ?>
+                                </li>
+                            <?php endwhile; ?> 
+                            <?php wp_reset_query(); ?>    
+                        </ul>
+                    </div>
+                </article>
             </section>
         </article>
         <span class="bg-bottom-content"></span>

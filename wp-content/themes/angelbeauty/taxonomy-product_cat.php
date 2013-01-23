@@ -21,9 +21,11 @@ global $sTemplateURL;
                 </article>
                 <article class="category-products">
                     <ul class="products">
+                        <?php $index = 0; ?>
                         <?php while (have_posts()) : the_post(); ?>
                         <?php global $product; ?>
-                        <li class="product">
+                        <li class="product<?php if ($index % 3 == 0) echo ' item-left'; ?>">
+                            <?php $index++; ?>
                             <a class="item" href="<?php the_permalink(); ?>">
                                 <h3><?php the_title(); ?></h3>
                                 <div class="background-thumbnail-product"> 
