@@ -35,6 +35,10 @@ $sTemplateURL = get_template_directory_uri();
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery<?php echo HTML_MODE; ?>.js"></script>
 <script>window.jQuery || document.write('<script src="<?php echo $sTemplateURL; ?>/js/vendor/jquery-1.8.3<?php echo HTML_MODE; ?>.js"><\/script>')</script>
 
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-507e234541de584e"></script>
+<!-- AddThis Button END -->
+
 <script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/libs/jquery.cycle.all.js"></script>
 <script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/libs/jcarousellite_1.0.1.js"></script>
 

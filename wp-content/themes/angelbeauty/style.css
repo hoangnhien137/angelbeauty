@@ -1360,6 +1360,91 @@ h3#order_review_heading {
 
 /*________________END CHECK OUT_________________*/
 
+/*________________PRODUCT DETAIL_________________*/
+article.main-product-detail {
+    padding-top: 15px;
+}
+
+article.main-product-detail div.images {
+    width: 310px;
+    height: 230px;
+    float: left;
+}
+
+article.main-product-detail div.images > a {
+    display: block;
+    width: 250px;
+    height: 179px;
+    margin: 0 auto;
+}
+
+div.images > a > img {
+    width: 250px;
+    height: 179px;
+}
+
+article.main-product-detail div.summary {
+    float: left;
+}
+
+div.summary > div.addthis-title > h1 {
+     color: #593C09;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    float: left;
+}
+
+div.summary > div.addthis-title > a.addthis_button {
+    float: left;
+    padding: 3px 0 0 10px;
+    display: block;
+}
+
+div.summary > p.price > span.amount {
+    color: #593C09;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+div.summary > span.price {
+    padding-top: 15px;
+    display: block;
+}
+
+div.summary > span.price > span.amount {
+     color: #FF0000;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+div.summary > div.cart-shopping {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.summary > div.cart-shopping > a.add_to_cart_button {
+    background: url("images/icon_buy.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    display: block;
+    height: 25px;
+    text-indent: -9999px;
+    width: 128px;
+    padding: 0px;
+}
+
+div.summary > div.cart-shopping > a.add_to_cart_button.added:before {
+    background: none;
+}
+
+
+
+/*________________END PRODUCT DETAIL_________________*/
 
 
 /* ==========================================================================
