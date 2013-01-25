@@ -273,6 +273,15 @@ function html5blp_widgets_init() {
 
     register_widget( 'Twenty_Eleven_Ephemera_Widget' );
     
+    register_sidebar( array(
+        'name' => __( 'Question and Answer', 'html5blp' ),
+        'id' => 'question-and-answer',
+        'description' => __( 'Question and Answer', 'html5blp' ),
+        'before_widget' => '<article class="question-and-answer">',
+        'after_widget' => "</article>",
+        'before_title' => '<h1 class="title-left" style="display: none">',
+        'after_title' => '</h1>',
+    ) );
     
 }
 add_action( 'widgets_init', 'html5blp_widgets_init' );
@@ -552,7 +561,8 @@ function handle_login_logo() { ?>
 add_action( 'login_enqueue_scripts', 'handle_login_logo' );
 
 register_nav_menus(array(
-    'header' => 'Menu Header'
+    'header' => 'Menu Header',
+    'catdichvu' => 'Category Dich Vu'
 ));
 
 
@@ -575,6 +585,7 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 if (function_exists('add_image_size')) {
     add_image_size('thumb-products', 201, 250, false); //(no cropped)
     add_image_size('thumb-products-cat', 199, 142, false); //(no cropped)
+    add_image_size('thumb-view-post', 200, 170, false); //(no cropped)
 }
 
 // Display 12 products per page
@@ -764,3 +775,79 @@ if ( ! function_exists( 'woo_get_query_context' ) ) {
 
 
 /*_______________________________________________________________end Card and Check out of WOO by Rony___________________________________________________________________*/
+
+
+#add_action('admin_head', 'remove_background_template_js' );
+function remove_background_template_js(){
+?>
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		<?php if( !empty($_GET['post_type']) && $_GET['post_type'] == 'question-and-answer' ) : ?>
+		$('input[name="post_name"]').each(function(){
+			$(this).closest('label').hide();
+		});
+		$('div#slugdiv').empty();
+		<?php else : ?>
+		<?php endif; ?>
+		var hrefNewTemplete = 'post-new.php?post_type=<?php echo 'question-and-answer' ?>';
+		var $addnew = $('a.add-new-h2');
+		if( $addnew.length && $addnew.attr('href').indexOf(hrefNewTemplete) > -1 ) {
+			$addnew.remove();
+		}
+		$('li#menu-posts-<?php echo 'question-and-answer'; ?> > .wp-submenu').remove();
+		//$('li#menu-posts-template > .wp-submenu > .wp-submenu-wrap > ul > li').find('a[tabindex="1"]').remove();
+		return;
+	});	
+</script>
+<?php
+};
+
+add_action( 'post_edit_form_tag' , 'post_edit_form_tag' );
+
+function post_edit_form_tag( ) {
+    echo ' enctype="multipart/form-data"';
+}
+
+function handle_comment_form_defaults($defaults) {
+    global $id;
+
+	if ( null === $post_id )
+		$post_id = $id;
+	else
+		$id = $post_id;
+
+	$commenter = wp_get_current_commenter();
+	$user = wp_get_current_user();
+	$user_identity = $user->exists() ? $user->display_name : '';
+
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? " aria-required='true'" : '' );
+	$fields =  array(
+		'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+		            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+		'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+		            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+		'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
+		            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
+	);
+
+	$required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required">*</span>' );
+    
+    $defaults = array(
+		'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
+		'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+		'must_log_in'          => '<p class="must-log-in">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
+		'logged_in_as'         => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), get_edit_user_link(), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
+		'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) . '</p>',
+		#'comment_notes_after'  => '<p class="form-allowed-tags">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</p>',
+		'id_form'              => 'commentform',
+		'id_submit'            => 'submit',
+		'title_reply'          => __( 'Leave a Reply' ),
+		'title_reply_to'       => __( 'Leave a Reply to %s' ),
+		'cancel_reply_link'    => __( 'Cancel reply' ),
+		'label_submit'         => __( 'Gửi' ),
+	);
+    return $defaults;
+}
+
+add_filter('comment_form_defaults', 'handle_comment_form_defaults');

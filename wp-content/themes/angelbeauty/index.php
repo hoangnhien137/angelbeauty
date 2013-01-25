@@ -12,7 +12,7 @@ global $sTemplateURL;
     <?php get_sidebar(); ?>
     <aside class="main-content">
         <span class="bg-top-content"></span>
-        <article class="content">
+        <article class="content startpage-home">
             <section>
                 <ul class="banner-startpage">
                     <li>

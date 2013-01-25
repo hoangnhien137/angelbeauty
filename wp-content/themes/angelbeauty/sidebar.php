@@ -10,21 +10,15 @@ global $sTemplateURL;
         <h1><a href="#">Spa</a></h1>
     </article>
     <article class="cat-dichvu">
-        <h1>Dich vu dieu tri</h1>
-        <ul class="categories">
-            <li class="cat-item">
-                <a href="#">Cham soc da mat</a>
-            </li>
-            <li class="cat-item">
-                <a href="#">Cham soc body</a>
-            </li>
-            <li class="cat-item">
-                <a href="#">Phun theu tham my</a>
-            </li>
-            <li class="cat-item">
-                <a href="#">Triet long vinh vien</a>
-            </li>
-        </ul>
+        <h1><?php _e("Dịch vụ điều trị");?></h1>
+        
+        <?php
+        $catDichVu = array(
+            'theme_location' => 'catdichvu',
+            'items_wrap' => '</span><ul class="categories">%3$s</ul></span>'
+        );
+        wp_nav_menu($catDichVu);
+        ?> 
     </article>
     <article class="cat-giaiphau">
         <h1>Giai phau tham my</h1>
