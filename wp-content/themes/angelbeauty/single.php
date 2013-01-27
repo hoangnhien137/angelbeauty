@@ -18,6 +18,83 @@ global $post;
                 <article class="title-pages">
                     <?php include('breadcrumb.php'); ?>
                 </article>
+                
+                <?php $aCat = get_the_category($post->ID); ?>
+                <?php foreach ($aCat as $oCat) {
+                        if (count($aCat) > 1) {
+                            if (0 != $oCat->category_parent) {
+                                $slug = $oCat->slug;
+                                }
+                        } else {
+                            $slug = $oCat->slug;
+                        }
+                    } ?>
+                
+                
+                
+                <?php if ( 'hinh-anh' == $slug ) { ?>
+                
+                    <?php $aListImg = get_field('_hoat_dong_hinh_anh', $post->ID); ?>
+                    <?php if (!empty($aListImg)) { ?>
+
+                        <article class="list-img-post">
+                            <ul class="clearfix">
+                                <?php $iCount = 0; ?>
+                                <?php if (have_posts()) : ?>
+                                <?php while (have_posts()) : the_post(); ?>
+                                <?php foreach ($aListImg as $listImg) : ?>
+                                    <li <?php if ($iCount % 4 == 0) echo 'class="li-no-margin"'; ?>>
+                                        <a class="show-img-post" href="<?php echo $listImg['_hinh_anh']; ?>"><img src="<?php echo $listImg['_hinh_anh']; ?>" alt="<?php the_title(); ?>" ></a>
+                                    </li>
+                                    <?php $iCount++; ?>
+                                <?php endforeach; ?>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                            </ul>
+                        </article>
+
+                    <?php } ?>
+                
+                <?php } elseif ('video' == $slug ) { ?>
+                
+                <?php $aListVideo = get_field('_link_of_video_clip', $post->ID); ?>
+                    <?php if (!empty($aListVideo)) { ?>
+                
+                    <article class="list-video-post">
+                        <?php if (have_posts()) : ?>
+                            <?php while (have_posts()) : the_post(); ?>
+                            <h1><?php the_title(); ?></h1>
+                            <div class="show-video">
+                                <?php echo $aListVideo; ?>
+                            </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        <h2><?php _e("Các video khác") ?></h2>
+                        <?php $iIndex = 0; ?>
+                        <ul class="cat-video-related clearfix">
+                            <?php query_posts("orderby=DESC&showposts=-1&taxonomy=category&term={$slug}"); ?>
+                            <?php if (have_posts()) : ?>
+                                <?php while (have_posts()) : the_post(); ?>
+                            <li class="item-post-<?php echo $post->ID; ?> <?php if ($iIndex % 4 == 0) echo 'no-margin'; ?>">
+                                <?php $iIndex++; ?>
+                                <a href="<?php the_permalink(); ?>" class="thumbnail-post">
+                                    <?php
+                                        if (has_post_thumbnail()) {
+                                            the_post_thumbnail('thumb-view-post');
+                                        }
+                                        ?>
+                                    <h1><?php the_title(); ?></h1>
+                                </a>
+                            </li>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
+                            <?php wp_reset_query(); ?>
+                        </ul>
+                     </article>
+                    <?php } ?>
+                
+                <?php } else { ?>
+                
                 <article class="view-single-post">
                     <div class="addthis-social">
                         <!-- AddThis Button BEGIN -->
@@ -57,8 +134,13 @@ global $post;
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </li>
                         <?php endwhile; ?>
+                        <?php wp_reset_query(); ?>
                     </ul>
                 </article>
+                
+                <?php } ?>
+                
+                
             </section>
         </article>
         <span class="bg-bottom-content"></span>

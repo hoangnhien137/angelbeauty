@@ -86,5 +86,7 @@ jQuery(document).ready(function($){
         auto: 3000,
         speed: 2000
     });
+    
+    $(".show-img-post").colorbox({rel:'show-img-post', transition:"none", width:"75%", height:"75%"});
 
 });

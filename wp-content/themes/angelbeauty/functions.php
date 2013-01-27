@@ -562,7 +562,9 @@ add_action( 'login_enqueue_scripts', 'handle_login_logo' );
 
 register_nav_menus(array(
     'header' => 'Menu Header',
-    'catdichvu' => 'Category Dich Vu'
+    'catdichvu' => 'Category Dịch Vụ',
+    'catgiaiphau' => 'Category Giải phẫu thẩm mỹ',
+    'catcongnghe' => 'Category Công nghệ máy móc'
 ));
 
 
@@ -586,6 +588,7 @@ if (function_exists('add_image_size')) {
     add_image_size('thumb-products', 201, 250, false); //(no cropped)
     add_image_size('thumb-products-cat', 199, 142, false); //(no cropped)
     add_image_size('thumb-view-post', 200, 170, false); //(no cropped)
+    add_image_size('thumb-cat-mini', 60, 50, false); //(no cropped)
 }
 
 // Display 12 products per page
@@ -851,3 +854,8 @@ function handle_comment_form_defaults($defaults) {
 }
 
 add_filter('comment_form_defaults', 'handle_comment_form_defaults');
+
+function angel_trim_title_words( $iNumberWords = 80, $sMore = ' ...', $iLength = -1 ) {
+    $sTitle = apply_filters('the_excerpt', get_the_title() );
+    return wp_trim_words_length($sTitle, $iNumberWords, $sMore, $iLength );
+}
