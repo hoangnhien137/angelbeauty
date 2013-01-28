@@ -46,6 +46,8 @@ if ($paged >= 2 || $page >= 2)
 
         <link rel="profile" href="http://gmpg.org/xfn/11" /> 
         
+        <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sTemplateURL; ?>/css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sTemplateURL; ?>/css/jquery.timepicker.css" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sTemplateURL; ?>/css/colorbox.css" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>?v=1.1" />
 

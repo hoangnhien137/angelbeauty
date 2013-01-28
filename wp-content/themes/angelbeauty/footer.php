@@ -39,6 +39,8 @@ $sTemplateURL = get_template_directory_uri();
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-507e234541de584e"></script>
 <!-- AddThis Button END -->
 
+<script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/libs/jquery-ui.js"></script>
+<script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/libs/jquery.timepicker.min.js"></script>
 <script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/libs/jquery.colorbox-min.js"></script>
 <script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/libs/jquery.cycle.all.js"></script>
 <script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/libs/jcarousellite_1.0.1.js"></script>

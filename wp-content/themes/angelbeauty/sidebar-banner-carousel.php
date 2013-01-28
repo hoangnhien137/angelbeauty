@@ -1,56 +1,27 @@
-<?php global $sTemplateURL; ?>
-
 <aside id="banner">
     <ul class="slide-banner">
-        <li><a href="<?php echo home_url(); ?>"><embed width="963" height="370" menu="false" wmode="transparent" type="application/x-shockwave-flash" pluginspage="#" quality="high" src="<?php echo $sTemplateURL; ?>/images/1358226161Top_AB_15-1-13_(960x369)1.swf"></a></li>
+        <?php $iID = get_page_by_path('trang-chu')->ID; ?>
+        <?php $iFlash = get_field('_flash_banner', $iID) ?>
+        <li><a href="<?php echo home_url(); ?>"><embed width="963" height="370" menu="false" wmode="transparent" type="application/x-shockwave-flash" pluginspage="#" quality="high" src="<?php echo $iFlash; ?>"></a></li>
     </ul>
 </aside> <!--end of aside#banner-->
+
 <aside class="gallery-carousel">
     <ul class="galery clearfix">
+        <?php $index = 0; ?>
+        <?php $aGalleryTop = get_field('_gallery_images_top', $iID) ?>
+        <?php foreach ($aGalleryTop as $aField) : ?>
+        <?php $index++; ?>
         <li>
-            <div id="zoom" class="pics">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
+            <div id="zoom-<?php echo $index; ?>" class="pics">
+                <?php foreach ($aField as $aImg) : ?>
+                <?php foreach ($aImg as $aImages) : ?>
+                <img style="width: 177px; height: 184px;" src="<?php echo $aImages['_images']; ?>">
+                <?php endforeach; ?>
+                <?php endforeach; ?>
             </div>
         </li>
-        <li>
-            <div id="gallery-2" class="pics">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
-            </div>
-        </li>
-        <li>
-            <div id="gallery-3" class="pics">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
-            </div>
-        </li>
-        <li>
-            <div id="gallery-4" class="pics">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
-            </div>
-        </li>
-        <li>
-            <div id="gallery-5" class="pics">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-1.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-2.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-3.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-4.png">
-                <img style="width: 177px; height: 184px;" src="<?php echo $sTemplateURL; ?>/images/galery-5.png">
-            </div>
-        </li>
+        <?php endforeach; ?>
+        
     </ul>
 </aside> <!-- end of aside.gallery-carousel -->

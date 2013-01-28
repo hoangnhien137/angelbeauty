@@ -1917,6 +1917,156 @@ article.view-all-cat > ul.cat-cong-nghe > li > a:hover > h1 {
 
 /*________________END CONTENT POST_________________*/
 
+/*__________________CALL_________________________*/
+article.template-call form.wpcf7-form {
+    width: 645px;
+    height: auto;
+}
+
+article.template-call form.wpcf7-form > p {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+article.template-call form.wpcf7-form > div {
+    margin-bottom: 6px;
+}
+
+article.template-call form.wpcf7-form > div > label,
+article.template-call form.wpcf7-form > p > label {
+    width: 158px;
+    height: 20px;
+    float: left;
+    text-align: right;
+    padding-right: 10px;
+}
+
+article.template-call form.wpcf7-form > div > label > span,
+article.template-call form.wpcf7-form > p > label > span {
+    color: #FF0000;
+}
+
+article.template-call form.wpcf7-form > div > div,
+article.template-call form.wpcf7-form > p > span {
+    width: 477px;
+    height: 20px;
+    display: block;
+    float: right;
+}
+
+article.template-call form.wpcf7-form div.security span.info-secu input,
+article.template-call form.wpcf7-form > p > span select,
+article.template-call form.wpcf7-form > p > span textarea,
+article.template-call form.wpcf7-form > p > span input {
+    width: 410px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #9A6C08;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+article.template-call form.wpcf7-form > p.message > span {
+    height: 110px;
+    display: block;
+}
+
+article.template-call form.wpcf7-form div.security span.info-secu {
+    float: left;
+}
+
+article.template-call form.wpcf7-form div.security img {
+    padding-left: 10px;
+    margin-left: 0px;
+    padding-top: 8px;
+}
+
+article.template-call form.wpcf7-form div.security span.info-secu input {
+    font-size: 20px;
+    height: 44px;
+    text-align: center;
+    width: 220px;
+}
+
+article.template-call form.wpcf7-form div.security {
+    float: left;
+}
+ 
+article.template-call form.wpcf7-form > div.security > div {
+    height: 44px;
+}
+
+article.template-call form.wpcf7-form > div.time > div > p.from {
+    width: 238px;
+    float: left;
+}
+
+div.time > div > p > span:first-child {
+    width: 72px;
+} 
+
+div.time > div > p > span:first-child > input {
+    width: 72px;
+    height: 20px;
+}
+
+div.time > div > p > span {
+    width: 95px;
+    display: inline-block;
+}
+
+div.time > div > p > span > input {
+    width: 95px;
+    height: 20px;
+}
+
+article.template-call form.wpcf7-form > div.time > div > p.to {
+    width: 238px;
+    float: right;
+}
+
+article.template-call form.wpcf7-form > p.send {
+    background: url("images/bg_button.png") repeat-x scroll 0 0 transparent;
+    border: 1px solid #3E2803;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 0.05em rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 0.05em rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 0.05em rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 12px;
+    height: 26px;
+    width: 52px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    -moz-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    display: block;
+    margin: 0px 0 0 168px;
+}
+
+article.template-call form.wpcf7-form p.required > label {
+    margin: 0px 0 0 220px;
+    text-align: left !important;
+}
+
+article.template-call form.wpcf7-form > p.send:hover {
+    background: url("images/bg_button_hover.png") repeat-x scroll 0 0 transparent;
+}
+
+article.template-call form.wpcf7-form > p.send > input.wpcf7-submit:focus {
+    background: none repeat scroll 0 0 #EDF7FD;
+    border-color: #4D3304;
+}
+
+
+
+/*__________________END CALL_________________________*/
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

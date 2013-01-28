@@ -4,27 +4,27 @@
 jQuery(document).ready(function($){
  
     
-    $('div#zoom').cycle({ 
+    $('div#zoom-1').cycle({ 
         fx:    'zoom', 
         sync:  0, 
         delay: -4000 
     });
 
-    $('div#gallery-2').cycle();
+    $('div#zoom-2').cycle();
 
-    $('div#gallery-3').cycle({ 
+    $('div#zoom-3').cycle({ 
         fx:    'curtainX', 
         sync:  false, 
         delay: -2000 
     });
  
-    $('div#gallery-4').cycle({ 
+    $('div#zoom-4').cycle({ 
         fx:      'turnDown', 
         delay:   -6000 
     });
 
     
-    $('div#gallery-5').cycle({ 
+    $('div#zoom-5').cycle({ 
         fx:      'custom', 
         cssBefore: {  
             left: 115,  
@@ -40,8 +40,8 @@ jQuery(document).ready(function($){
         animIn: {  
             left: 0,  
             top: 0,  
-            width: 200,  
-            height: 200  
+            width: 177,  
+            height: 184  
         }, 
         cssAfter: {  
             zIndex: 0 
@@ -88,5 +88,9 @@ jQuery(document).ready(function($){
     });
     
     $(".show-img-post").colorbox({rel:'show-img-post', transition:"none", width:"75%", height:"75%"});
+    
+    $( ".fix-datepicker" ).datepicker();
+    
+    $('.timepicker').timepicker({ 'scrollDefaultNow': true });
 
 });

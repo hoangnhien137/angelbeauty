@@ -3,7 +3,6 @@
  * The main template file.
  */
 get_header();
-global $sTemplateURL;
 ?>
 
 <?php get_sidebar('banner-carousel'); ?> 
@@ -14,28 +13,24 @@ global $sTemplateURL;
         <span class="bg-top-content"></span>
         <article class="content startpage-home">
             <section>
+                <?php $iID = get_page_by_path('trang-chu')->ID; ?>
                 <ul class="banner-startpage">
+                    <?php $index1 = 0; ?>
+                    <?php $aBannerTop = get_field('_gallery_images_content_top', $iID) ?>
+                    <?php foreach ($aBannerTop as $aFieldTop) : ?>
+                    <?php $index1++; ?>
                     <li>
-                        <div id="content-banner-1" class="pics">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-2.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-3.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-4.jpg">
+                        <div id="content-banner-<?php echo $index1; ?>" class="pics">
+                            <?php foreach ($aFieldTop as $aImgTop) : ?>
+                            <?php foreach ($aImgTop as $aImagesTop) : ?>
+                            <img style="width: 645px; height: 290px;" src="<?php echo $aImagesTop['_images_content_top']; ?>">
+                            <?php endforeach; ?>
+                            <?php endforeach; ?>
                         </div>
                     </li>
-                    <li>
-                        <div id="content-banner-2" class="pics">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-2.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-3.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-4.jpg">
-                        </div>
-                    </li>
-                    <li>
-                        <div id="content-banner-3" class="pics">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-2.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-3.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-4.jpg">
-                        </div>
-                    </li>
+                    
+                    <?php endforeach; ?>
+                    
                 </ul>
                 <div class="product-startpage">
                     <div id="carousellite">
@@ -72,27 +67,20 @@ global $sTemplateURL;
                     </div>
                 </div>
                <ul class="banner-startpage">
+                    <?php $index2 = 3; ?>
+                    <?php $aBannerBottom = get_field('_gallery_images_content_bottom', $iID) ?>
+                    <?php foreach ($aBannerBottom as $aFieldBottom) : ?>
+                    <?php $index2++; ?>
                     <li>
-                        <div id="content-banner-4" class="pics">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-2.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-3.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-4.jpg">
+                        <div id="content-banner-<?php echo $index2; ?>" class="pics">
+                            <?php foreach ($aFieldBottom as $aImgBottom) : ?>
+                            <?php foreach ($aImgBottom as $aImagesBottom) : ?>
+                            <img style="width: 645px; height: 290px;" src="<?php echo $aImagesBottom['_images_content_bottom']; ?>">
+                            <?php endforeach; ?>
+                            <?php endforeach; ?>
                         </div>
                     </li>
-                    <li>
-                        <div id="content-banner-5" class="pics">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-2.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-3.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-4.jpg">
-                        </div>
-                    </li>
-                    <li>
-                        <div id="content-banner-6" class="pics">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-2.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-3.jpg">
-                            <img style="width: 645px; height: 290px;" src="<?php echo $sTemplateURL; ?>/images/banner-4.jpg">
-                        </div>
-                    </li>
+                    <?php endforeach; ?>
                 </ul>
             </section>
         </article>
