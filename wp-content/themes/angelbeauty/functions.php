@@ -780,7 +780,7 @@ if ( ! function_exists( 'woo_get_query_context' ) ) {
 /*_______________________________________________________________end Card and Check out of WOO by Rony___________________________________________________________________*/
 
 
-#add_action('admin_head', 'remove_background_template_js' );
+add_action('admin_head', 'remove_background_template_js' );
 function remove_background_template_js(){
 ?>
 <script type="text/javascript">
@@ -858,4 +858,64 @@ add_filter('comment_form_defaults', 'handle_comment_form_defaults');
 function angel_trim_title_words( $iNumberWords = 80, $sMore = ' ...', $iLength = -1 ) {
     $sTitle = apply_filters('the_excerpt', get_the_title() );
     return wp_trim_words_length($sTitle, $iNumberWords, $sMore, $iLength );
+}
+
+function currentPageURL() {
+    $curpageURL = 'http';
+    if ($_SERVER["HTTPS"] == "on") {
+        $curpageURL.= "s";
+    }
+    $curpageURL.= "://";
+    if ($_SERVER["SERVER_PORT"] != "80") {
+        $curpageURL.= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
+    } else {
+        $curpageURL.= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+    }
+    return $curpageURL;
+}
+
+function wp_redirect_filter($location) {
+	if( headers_sent() ) {
+		echo '<script>document.location.href="'.$location.'"<script>';
+		exit;
+	}
+	return $location;
+}
+
+add_filter('wp_redirect', 'wp_redirect_filter');
+
+#var_dump($_POST);
+
+$isSubmitPost = false;
+if (!empty($_POST['_wp_http_referer']) && !empty($_POST['_wpnonce'])) {
+    $isSubmitPost = true;
+}
+if (!empty($_POST['submit']) && 'POST' == $_SERVER['REQUEST_METHOD'] && $_POST['submit'] == "submit" && !empty($_POST['_wpnonce'])) {
+    $isSubmitPost = true;
+}
+if ($isSubmitPost) {
+    $postData = array(
+        'post_title' => $_POST['post_name_type'],
+        'post_content' => $_POST['post_message_type'],
+        'post_excerpt'  => $_POST['post_email_type'],
+        'post_status' => 'publish', // Choose: publish, preview, future, draft, etc.
+        'post_type' => 'question-and-answer'
+    );
+    $sName = $_POST['post_name_type'];
+    $postId = wp_insert_post($postData);
+
+    if (!is_wp_error($postId)) {
+        if (!empty($sName)) {
+            $sEmail = $_POST['post_email_type'];
+            $time = date('d/m/Y');
+
+            add_post_meta($postId, 'email_type', $sEmail);
+            add_post_meta($postId, 'time_type', $time);
+        }
+        #$page = get_page_by_path('question-and-answer');
+        #var_dump($page);
+        #$location = currentPageURL();
+        #wp_redirect($location);
+        #exit;
+    }
 }

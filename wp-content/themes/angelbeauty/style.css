@@ -2066,6 +2066,145 @@ article.template-call form.wpcf7-form > p.send > input.wpcf7-submit:focus {
 
 
 /*__________________END CALL_________________________*/
+article.question-and-answer {
+    width: 645px;
+    height: auto;
+}
+
+div.form-question {
+    width: 645px;
+    height: 353px;
+    background: url("images/bg_send.png") no-repeat scroll 0 0 transparent;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    padding-top: 15px;
+}
+
+form#new_post {
+    height: 300px;
+    padding-top: 53px;
+    width: 100%;
+}
+
+form#new_post > p {
+    margin-bottom: 14px;
+}
+
+form#new_post > p.question-name,
+form#new_post > p.question-email {
+    height: 25px;
+}
+
+form#new_post > p > label {
+    width: 135px;
+    float: left;
+    text-align: right;
+    padding-right: 10px;
+     color: #E3B23C;
+    font-weight: 600;
+}
+
+form#new_post > p.question-message > textarea {
+    height: 105px;
+}
+
+form#new_post > p > textarea,
+form#new_post > p > input {
+    width: 375px;
+    float: left;
+    height: 25px;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 12px;
+     color: #593C09;
+}
+
+form#new_post div#button-submit {
+    height: 38px;
+    text-align: center;
+}
+
+form#new_post div#button-submit > input {
+    height: 38px;
+    width: 145px;
+    background: url("images/bg_title-map.png") no-repeat scroll 0 0 transparent;
+    color: #E3B23C;
+    cursor: pointer;
+    font-family: 'VNTArab';
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 0 3px 0 #1F1603;
+    -moz-text-shadow: 0 3px 0 #1F1603;
+    -webkit-text-shadow: 0 3px 0 #1F1603;
+    text-transform: uppercase;
+    border: none;
+    padding: 0 0 12px 0;
+    outline-style: none;
+}
+
+div.conten-q-a {
+    padding-bottom: 20px;
+}
+
+div.conten-q-a > ul {
+    list-style: none;
+    padding: 0px;
+}
+
+div.conten-q-a > ul > li:first-child {
+    margin-top: 0px;
+}
+
+div.conten-q-a > ul > li {
+    width: 645px;
+    height: auto;
+    margin-top: 15px;
+}
+
+div.format-question {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 16px;
+    padding-bottom: 5px;
+}
+
+div.format-send {
+    width: 100%;
+}
+
+div.format-send > div.email-send {
+    width: 285px;
+}
+
+div.email-send > p,
+div.email-send > label {
+    float: left;
+}
+
+div.format-send > div,
+div.format-send > p {
+    width: 180px;
+    float: left;
+    text-align: left;
+    color: #8A6100;
+    font-weight: 400;
+}
+
+p.author-send > span {
+    font-weight: 600;
+}
+
+div.admin-answer {
+    padding-top: 5px;
+    color: #800000;
+    line-height: 16px !important;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 13px;
+}
+
 
 /* ==========================================================================
    Helper classes
