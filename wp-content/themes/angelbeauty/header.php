@@ -90,9 +90,9 @@ wp_head();
                     </aside> <!--end of aside#logo-->
                     <aside class="language clearfix">
                         <ul class="clearfix">
-                            <li class="vietnam"><a href="#"><?php _e("Tiếng việt") ?></a></li>
-                            <li class="english"><a href="#">English</a></li>
+                            <?php language_selector_flags(); ?>
                         </ul>
+                        
                     </aside>
                      
                     <?php

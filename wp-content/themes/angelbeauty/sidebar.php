@@ -54,7 +54,13 @@ global $sTemplateURL, $post;
     </article>
     <article class="cat-datcuochen">
         <img src="<?php echo $sTemplateURL; ?>/images/icon_phone.png">
-        <a href="#"><?php _e("Đặt cuộc hẹn");?></a>
+        <?php
+        global $wpdb;
+        $idCall = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = 'call' and post_type='page'");
+        $postCall = get_post($idCall);
+        $postCallLink = $postCall->guid;
+        ?>
+        <a href="<?php echo $postCallLink; ?>"><?php _e("Đặt cuộc hẹn");?></a>
     </article>
     <article class="cat-thoitrang">
         <h1><?php _e("Thời trang"); ?></h1>

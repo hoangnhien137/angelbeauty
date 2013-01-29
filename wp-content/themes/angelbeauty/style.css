@@ -149,39 +149,90 @@ aside#logo > div {
     margin: 0 auto;
 }
 
-aside.language {
+/*aside.language {
     height: 40px;
     width: 191px;
     position: absolute;
     right: 0px;
     bottom: 48px;
+}*/
+
+aside.language {
+    height: 12px;
+    width: 44px;
+    position: absolute;
+    right: 0px;
+/*    bottom: 48px;*/
+bottom: 55px;
 }
 
 aside.language ul > li {
     float: left;
-    height: 40px;
-    line-height: 32px;
+    height: 12px;
+    width: 18px;
+    margin-left: 8px; 
 }
 
-aside.language ul > li.english {
-    background: url("images/bg_lang.png") no-repeat scroll -103px 0 transparent;
-    width: 88px;
-}
-
-aside.language ul > li.vietnam {
-    background: url("images/bg_lang.png") no-repeat scroll 0 0 transparent;
-    width: 102px;
-    margin-right: 1px;
-}
+aside.language ul > li.lang-current > img {
+    opacity: 0.5;
+} 
 
 aside.language ul > li > a {
+    display: block;
+    height: 12px;
+    width: 18px;
+}
+
+aside.language ul > li > a > img {
+    vertical-align: top;
+    line-height: 12px;
+}
+
+aside.language ul > li > img {
+    vertical-align: top;
+}
+
+aside.language ul > li:first-child {
+    margin-left: 0px;
+}
+
+/*aside.language ul > li {
+    float: left;
+    height: 40px;
+    line-height: 32px;
+    background: url("images/bg_lang.png") no-repeat scroll 0 0 transparent;
+    width: 67px;
+    margin-right: 1px;
     color: #ffff66;
     font-family: Arial;
     font-weight: 400;
     font-size: 14px;
     line-height: 32px;
     padding-left: 35px;
-}
+}*/
+
+
+/*aside.language ul > li:first-child {
+    background: url("images/bg_lang.png") no-repeat scroll -103px 0 transparent;
+    width: 88px;
+    margin-right: 0px;
+    padding-left: 0px;
+}*/
+
+/*aside.language ul > li.vietnam {
+    background: url("images/bg_lang.png") no-repeat scroll 0 0 transparent;
+    width: 102px;
+    margin-right: 1px;
+}*/
+
+/*aside.language ul > li > a {
+    color: #ffff66;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+    padding-left: 35px;
+}*/
 
 nav#header-menu {
     height: 40px;

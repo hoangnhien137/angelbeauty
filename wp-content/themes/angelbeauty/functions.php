@@ -283,6 +283,16 @@ function html5blp_widgets_init() {
         'after_title' => '</h1>',
     ) );
     
+    register_sidebar( array(
+        'name' => __( 'Multilanguage', 'html5blp' ),
+        'id' => 'sidebar-multi',
+		'description' => __( 'An optional widget area for your site Multilanguage', 'html5blp' ),
+        'before_widget' => '<aside title="Multilanguage" class="multilang span3">',
+        'after_widget' => "</aside>",
+        'before_title' => '<h1>',
+        'after_title' => '</h1>',
+    ) );
+    
 }
 add_action( 'widgets_init', 'html5blp_widgets_init' );
 
@@ -890,10 +900,16 @@ $isSubmitPost = false;
 if (!empty($_POST['_wp_http_referer']) && !empty($_POST['_wpnonce'])) {
     $isSubmitPost = true;
 }
+
+if (('POST' == $_SERVER['REQUEST_METHOD']) && (!empty($_POST['_wpnonce']) )) {
+    $submitVerified = wp_verify_nonce($_POST['_wpnonce'], 'new-post');
+    $isSubmitPost = true;
+}
+
 if (!empty($_POST['submit']) && 'POST' == $_SERVER['REQUEST_METHOD'] && $_POST['submit'] == "submit" && !empty($_POST['_wpnonce'])) {
     $isSubmitPost = true;
 }
-if ($isSubmitPost) {
+if ($isSubmitPost && $submitVerified) {
     $postData = array(
         'post_title' => $_POST['post_name_type'],
         'post_content' => $_POST['post_message_type'],
@@ -917,5 +933,19 @@ if ($isSubmitPost) {
         #$location = currentPageURL();
         #wp_redirect($location);
         #exit;
+    }
+}
+
+
+function language_selector_flags(){
+    $languages = icl_get_languages('skip_missing=0&orderby=code');
+    if(!empty($languages)){
+        foreach($languages as $l){
+            if(!$l['active']) {
+                echo '<li><a href="'.$l['url'].'"><img src="'.$l['country_flag_url'].'" height="12" alt="'.$l['language_code'].'" width="18" /></a></li>';
+            } else {
+                echo '<li class="lang-current"><img src="'.$l['country_flag_url'].'" height="12" alt="'.$l['language_code'].'" width="18" /></li>';
+            }
+        }
     }
 }
