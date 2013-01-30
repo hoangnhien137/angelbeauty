@@ -26,9 +26,14 @@ $sTemplateURL = get_template_directory_uri();
                 <li class="skindoctors"><a href="#">1</a></li>
             </ul>
         </article>
-        <span class="coppy-right"> Designed by <a href="#">Angelbeauty</a>. All rights reserved.</span>
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style ">
+                <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            </div>
+            <!-- AddThis Button END -->
+            <span class="coppy-right"> Designed by <a href="#">Angelbeauty</a>. All rights reserved.</span>
     </section>
-
+    
 </footer><!-- end footer -->
 </div><!-- end #container -->
 
@@ -46,7 +51,7 @@ $sTemplateURL = get_template_directory_uri();
 <script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/libs/jcarousellite_1.0.1.js"></script>
 
 <script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/plugins.js?v=1"></script>
-<script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/script.js?v=2.0"></script>
+<script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/script.js?v=2.2"></script>
 
 <?php wp_footer(); ?>
 

@@ -49,7 +49,7 @@ if ($paged >= 2 || $page >= 2)
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sTemplateURL; ?>/css/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sTemplateURL; ?>/css/jquery.timepicker.css" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo $sTemplateURL; ?>/css/colorbox.css" />
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>?v=1.1" />
+        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>?v=2.1" />
 
 <?php $class = !empty($_GET['debug']) ? ' debug' : '';
 if ($class != '') :

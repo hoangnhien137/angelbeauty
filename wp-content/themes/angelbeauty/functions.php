@@ -273,25 +273,8 @@ function html5blp_widgets_init() {
 
     register_widget( 'Twenty_Eleven_Ephemera_Widget' );
     
-    register_sidebar( array(
-        'name' => __( 'Question and Answer', 'html5blp' ),
-        'id' => 'question-and-answer',
-        'description' => __( 'Question and Answer', 'html5blp' ),
-        'before_widget' => '<article class="question-and-answer">',
-        'after_widget' => "</article>",
-        'before_title' => '<h1 class="title-left" style="display: none">',
-        'after_title' => '</h1>',
-    ) );
+   
     
-    register_sidebar( array(
-        'name' => __( 'Multilanguage', 'html5blp' ),
-        'id' => 'sidebar-multi',
-		'description' => __( 'An optional widget area for your site Multilanguage', 'html5blp' ),
-        'before_widget' => '<aside title="Multilanguage" class="multilang span3">',
-        'after_widget' => "</aside>",
-        'before_title' => '<h1>',
-        'after_title' => '</h1>',
-    ) );
     
 }
 add_action( 'widgets_init', 'html5blp_widgets_init' );
@@ -949,3 +932,17 @@ function language_selector_flags(){
         }
     }
 }
+
+
+function change_editor_font() {
+    echo "<style type='text/css'> 
+#editorcontainer textarea#content { 
+  background: #efefef; /* A darker background is better for eyes ;) */
+  font-family: Monaco, Consolas, \"Andale Mono\", \"Dejavu Sans Mono\", monospace; /* The best monospace font-family stack, i think */
+  font-size:14px; 
+  text-shadow:0px 0px 0px #444; /* Using it because i can */
+  color:#444; } 
+</style>";
+}
+
+add_action("admin_print_styles", "change_editor_font");

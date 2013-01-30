@@ -926,9 +926,21 @@ article.logo-footer > ul > li.skindoctors {
 }
 
 span.coppy-right {
-    float: right;
-    padding-right: 20px;
-    line-height: 107px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
+
+footer > section.container div.addthis_toolbox {
+    height: 30px;
+    position: absolute;
+    right: 173px;
+    top: 25%;
+}
+
+ul#flash-to-banner {
+    height: 370px !important;
+    overflow: hidden;
 }
 
 /*_______________CONTENT PAGES_______________*/
@@ -1157,6 +1169,7 @@ div.google-map-contact > div.chi-nhanh {
 div.google-map-contact > div.map-contact {
     width: 70%;
     float: right;
+    height: 360px;
 }
 
 div.form-contact {
@@ -1872,6 +1885,10 @@ article.comment-single form#commentform > p > input {
 
 article.comment-single form#commentform > p > textarea {
     height: 150px;
+    color: #593C09;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 12px;
+    width: 450px;
 }
 
 input[type="text"], input[type="password"], textarea {
@@ -2255,6 +2272,7 @@ div.admin-answer {
     font-style: italic;
     font-size: 13px;
 }
+
 
 
 /* ==========================================================================

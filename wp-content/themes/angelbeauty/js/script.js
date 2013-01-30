@@ -92,5 +92,12 @@ jQuery(document).ready(function($){
     $( ".fix-datepicker" ).datepicker();
     
     $('.timepicker').timepicker({ 'scrollDefaultNow': true });
+    
+    $('ul#flash-to-banner').cycle({ 
+        fx:     'fade', 
+        speed:  '7000', 
+        timeout: 3000,
+        auto: true
+    });
 
 });

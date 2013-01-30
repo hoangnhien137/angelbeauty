@@ -33,6 +33,7 @@
                         <div class="chi-nhanh">
                             <ul>
                                 <?php foreach ($aContact as $aMapContact) : ?>
+                                    <?php #$imageContact = $aMapContact['_hinh_anh_ban_do']; ?>
                                     <?php $imageContact = $aMapContact['_hinh_anh_ban_do']; ?>
                                     <li>
                                         <?php echo $aMapContact['_ten_chi_nhanh']; ?>
@@ -42,13 +43,13 @@
                             </ul>
                         </div>
                         <div class="map-contact">
-                            <img class="img-contact" src="<?php echo $imageContact; ?>" >
+                            <?php echo do_shortcode($imageContact); ?>
                         </div>
                     </div>
                     <div class="form-contact">
-                        <h1 class="your-contact">Ý kiến của bạn</h1>
+                        <h1 class="your-contact"><?php _e("Ý kiến của bạn"); ?></h1>
                         <?php echo do_shortcode('[contact-form-7 id="26" title="Liên hệ"]'); ?>
-                        <h2><span>*</span> ﻿Mục bắt buộc nhập</h2>
+                        <h2><span><?php _e("*"); ?></span> ﻿<?php _e("Mục bắt buộc nhập"); ?></h2>
                     </div>
                     <p class="thumb-map">
                         <?php if (has_post_thumbnail()) : ?>
