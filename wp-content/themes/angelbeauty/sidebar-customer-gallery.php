@@ -1,7 +1,7 @@
 <?php global $sTemplateURL; ?>
 
 <aside class="customer-gallery">
-    <h1>Khach hang</h1>
+    <h1>Khaùch haøng</h1>
     <div id="customer-carousel">
         <ul class="customer clearfix">
             <li>

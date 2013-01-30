@@ -11,7 +11,7 @@ global $sTemplateURL, $post;
         <h1><a href="<?php echo get_category_link( $catSpa->cat_ID ); ?>"><?php echo $catSpa->name; ?></a></h1>
     </article>
     <article class="cat-dichvu">
-        <h1><?php _e("Dịch vụ điều trị");?></h1>
+        <h1><?php _e("Dòch vuï ñieàu trò");?></h1>
         <?php
         $catDichVu = array(
             'theme_location' => 'catdichvu',
@@ -21,7 +21,7 @@ global $sTemplateURL, $post;
         ?> 
     </article>
     <article class="cat-giaiphau">
-        <h1><?php _e("Giải phẫu thẩm mỹ");?></h1>
+        <h1><?php _e("Giaûi phaåu thaåm myõ");?></h1>
         <?php
         $catGiaiPhau = array(
             'theme_location' => 'catgiaiphau',
@@ -31,7 +31,7 @@ global $sTemplateURL, $post;
         ?>
     </article>
     <article class="cat-congnghe">
-        <h1><?php _e("Công nghệ máy móc");?></h1>
+        <h1><?php _e("Coâng ngheä maùy moùc");?></h1>
         <?php
         $catCongNghe = array(
             'theme_location' => 'catcongnghe',
@@ -41,7 +41,7 @@ global $sTemplateURL, $post;
         ?>
     </article>
     <article class="cat-hotro">
-        <h1><?php _e("Hỗ trợ trực tuyến");?></h1>
+        <h1><?php _e("Hoã trôï tröïc tuyeán");?></h1>
         <ul class="info-cantact">
             <li class="yahoo">
                 <a href="ymsgr:sendim?thienthansacdep196"><?php _e("Tư vấn viên");?></a>
@@ -60,7 +60,7 @@ global $sTemplateURL, $post;
         $postCall = get_post($idCall);
         $postCallLink = $postCall->guid;
         ?>
-        <a href="<?php echo $postCallLink; ?>"><?php _e("Đặt cuộc hẹn");?></a>
+        <a href="<?php echo $postCallLink; ?>"><?php _e("Ñaët cuoäc heïn");?></a>
     </article>
     <article class="cat-thoitrang">
         <h1><?php _e("Thời trang"); ?></h1>
