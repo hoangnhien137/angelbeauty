@@ -245,9 +245,7 @@ nav#header-menu > ul > li {
     float: left;
     width: 107px;
     height: 40px;
-    /*background: url("images/bg_menu.png") no-repeat scroll 0 0 transparent;*/
-	background-image: url("images/sprite1.png");
-	background-position: -10px -10px;
+    background: url("images/bg_menu.png") no-repeat scroll 0 0 transparent;
     line-height: 40px;
 }
 
@@ -409,8 +407,7 @@ aside.main-content > span.bg-top-content {
     display: block;
     width: 703px;
     height: 85px;
-    /*background: url("images/bg_top-content.png") no-repeat scroll 0 0 transparent;*/
-	background: url("images/sprite1.png") -10px -489px;
+    background: url("images/bg_top-content.png") no-repeat scroll 0 0 transparent;
 }
 
 aside.main-content > article.content {
@@ -423,8 +420,7 @@ aside.main-content > span.bg-bottom-content {
     display: block;
     width: 703px;
     height: 94px;
-    /*background: url("images/bg_bottom-content.png") no-repeat scroll 0 0 transparent;*/
-	background: url("images/sprite1.png") -10px -594px;
+    background: url("images/bg_bottom-content.png") no-repeat scroll 0 0 transparent;
 }
 
 aside.main-content > article.content {
@@ -566,9 +562,7 @@ aside.side-bar-left > span.bg-top-sidebar {
     display: block;
     width: 232px;
     height: 93px;
-    /*background: url("images/bg_top-cat.png") no-repeat scroll left top transparent;*/
-	background-image: url("images/sprite1.png");
-	background-position: -10px -70px;
+    background: url("images/bg_top-cat.png") no-repeat scroll left top transparent;
 }
 
 aside.side-bar-left > article {
@@ -593,10 +587,8 @@ article.cat-congnghe > h1,
 article.cat-dichvu > h1,
 article.cat-spa > h1 {
     height: 38px;
-    /*background: url("images/bg_cat-current.png") no-repeat scroll 42% top transparent;*/
+    background: url("images/bg_cat-current.png") no-repeat scroll 42% top transparent;
     width: 232px;
-	background-image: url("images/sprite1.png");
-	background-position: 0 -183px;
 }
 
 article.cat-datcuochen > a,
@@ -660,9 +652,7 @@ article.cat-giaiphau > h1 {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    /*background: url("images/bg_title-cat.png") no-repeat scroll 42% top transparent;*/
-	background-image: url("images/sprite1.png");
-	background-position: -9.16px -241px;
+    background: url("images/bg_title-cat.png") no-repeat scroll 42% top transparent;
     text-transform: uppercase;
     text-shadow: 0 3px 0 #1f1603;
     -moz-text-shadow: 0 3px 0 #1f1603;
@@ -676,8 +666,7 @@ article.cat-congnghe {
 
 aside.side-bar-left article.cat-hotro ul > li.yahoo {
     height: 34px;
-    /*background: url("images/icon_yahoo.png") no-repeat scroll 5% top transparent;*/
-	background: url("images/sprite1.png") -1.95px -1014px;
+    background: url("images/icon_yahoo.png") no-repeat scroll 5% top transparent;
     padding-bottom: 10px;
 }
 
@@ -687,8 +676,7 @@ article.cat-hotro ul > li.yahoo > a {
 
 article.cat-hotro ul > li.skype {
     height: 31px;
-    /*background: url("images/icon_skype.png") no-repeat scroll 5% top transparent;*/
-	background: url("images/sprite1.png") -1.75px -1068px;
+    background: url("images/icon_skype.png") no-repeat scroll 5% top transparent;
 }
 
 article.cat-hotro ul > li.skype > a {
@@ -730,9 +718,7 @@ article.cat-thoitrang > h1 {
     padding-left: 15px;
     height: 21px;
     line-height: 21px;
-    /*background: url("images/bg_title-cat-sub.png") no-repeat scroll left top transparent;*/
-	background-image: url("images/sprite1.png");
-	background-position: -10px -335px;
+    background: url("images/bg_title-cat-sub.png") no-repeat scroll left top transparent;
     text-align: left;
     text-transform: uppercase;
     width: 208px;
@@ -814,9 +800,7 @@ aside.side-bar-left > span.bg-bottom-sidebar {
     display: block;
     width: 232px;
     height: 93px;
-    /*background: url("images/bg_bottom-cat.png") no-repeat scroll left top transparent;*/
-	background: url("images/sprite1.png") -10px -376px;
-
+    background: url("images/bg_bottom-cat.png") no-repeat scroll left top transparent;
 }
 
 aside.customer-gallery {
@@ -835,8 +819,7 @@ aside.customer-gallery > h1 {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    /*background: url("images/bg_customer.png") no-repeat scroll left top transparent;*/
-	background: url("images/sprite1.png") -10px -708px;
+    background: url("images/bg_customer.png") no-repeat scroll left top transparent;
     text-transform: uppercase;
     text-shadow: 0 3px 0 #1f1603;
     -moz-text-shadow: 0 3px 0 #1f1603;
@@ -921,29 +904,25 @@ article.logo-footer > ul > li > a {
 article.logo-footer > ul > li.angelflowers {
     width: 59px;
     height: 55px;
-    /*background: url("images/icon_angelflowers.png") no-repeat scroll center center transparent;*/
-	background: url("images/sprite1.png") -10px -764px;
+    background: url("images/icon_angelflowers.png") no-repeat scroll center center transparent;
 }
 
 article.logo-footer > ul > li.bacsilanda {
     width: 92px;
     height: 55px;
-    /*background: url("images/icon_doctor.png") no-repeat scroll center center transparent;*/
-	background: url("images/sprite1.png") -10px -819px;
+    background: url("images/icon_doctor.png") no-repeat scroll center center transparent;
 }
 
 article.logo-footer > ul > li.angelbeauty {
     width: 25px;
     height: 55px;
-    /*background: url("images/icon_center-footer.png") no-repeat scroll transparent;*/
-	background: url("images/sprite1.png") -10px -884px;
+    background: url("images/icon_center-footer.png") no-repeat scroll transparent;
 }
 
 article.logo-footer > ul > li.skindoctors {
     width: 73px;
     height: 55px;
-    /*background: url("images/icon_skin-doctor.png") no-repeat scroll center center transparent;*/
-	background: url("images/sprite1.png") -10px -949px;
+    background: url("images/icon_skin-doctor.png") no-repeat scroll center center transparent;
 }
 
 span.coppy-right {
