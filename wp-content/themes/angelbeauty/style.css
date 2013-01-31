@@ -721,6 +721,18 @@ aside.side-bar-left article.cat-thoitrang {
     background-color: #3e2b02;
 }
 
+article.cat-hoidap div.carousellite-hoidap {
+    height: 286px !important;
+    overflow: hidden;
+}
+
+div.container-hoidap {
+    height: 286px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background: url("images/bg_content-cat.png") repeat-x scroll left top transparent;
+}
+
 article.cat-hoidap > h1,
 article.cat-lamdep > h1,
 article.cat-thoitrang > h1 {
@@ -2158,6 +2170,11 @@ article.template-call form.wpcf7-form > p.send > input.wpcf7-submit:focus {
 article.question-and-answer {
     width: 645px;
     height: auto;
+}
+
+article.question-and-answer > div.pagingbox {
+    padding-bottom: 20px;
+    padding-top: 10px;
 }
 
 div.form-question {

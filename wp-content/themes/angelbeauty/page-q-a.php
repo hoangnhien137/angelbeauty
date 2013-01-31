@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Template Name: Question and Answer
  */
@@ -22,7 +21,7 @@ global $post;
                 <article class="question-and-answer">
                     <div class="conten-q-a">
                         <ul class="list-q-a">
-                            <?php query_posts("orderby=DESC&showposts=-1&post_type=question-and-answer"); ?>
+                            <?php query_posts("orderby=DESC&showposts=9&post_type=question-and-answer"); ?>
                             <?php if (have_posts()) : ?>
                             <?php while (have_posts()) : the_post(); ?>
                             <?php $sAnswer = get_field('_answer', $post->ID); ?>

@@ -472,6 +472,11 @@ function wp_trim_words_length($sText, $iNumberWords, $sMore, $iLength = -1) {
     return $sText;
 }
 
+function angel_trim_content_words( $iNumberWords = 80, $sMore = ' ...', $iLength = -1 ) {
+    $sContent = apply_filters('the_content', get_the_content('') );
+    return wp_trim_words_length($sContent, $iNumberWords, $sMore, $iLength );
+}
+
 
 
 if (!function_exists('html5blp_comment')) :
@@ -892,6 +897,7 @@ if (('POST' == $_SERVER['REQUEST_METHOD']) && (!empty($_POST['_wpnonce']) )) {
 if (!empty($_POST['submit']) && 'POST' == $_SERVER['REQUEST_METHOD'] && $_POST['submit'] == "submit" && !empty($_POST['_wpnonce'])) {
     $isSubmitPost = true;
 }
+
 if ($isSubmitPost && $submitVerified) {
     $postData = array(
         'post_title' => $_POST['post_name_type'],
@@ -945,4 +951,14 @@ function change_editor_font() {
 </style>";
 }
 
-add_action("admin_print_styles", "change_editor_font");
+#add_action("admin_print_styles", "change_editor_font");
+
+
+
+add_action( 'admin_head-post.php', 'cwc_fix_html_editor_font' );
+add_action( 'admin_print_styles', 'cwc_fix_html_editor_font' );
+ 
+function cwc_fix_html_editor_font() { ?>
+ 
+<style type="text/css">#editorcontainer #content, #wp_mce_fullscreen { font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif; }</style>
+<?php }

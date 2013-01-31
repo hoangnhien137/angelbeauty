@@ -3,7 +3,6 @@
  * The template for displaying all product.
  */
 get_header();
-global $sTemplateURL;
 ?>
 <?php get_sidebar('banner-carousel'); ?> 
 

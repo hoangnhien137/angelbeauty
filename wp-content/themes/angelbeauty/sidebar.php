@@ -103,26 +103,24 @@ global $sTemplateURL, $post;
     </article>
     <article class="cat-hoidap">
         <h1><?php _e("Hỏi đáp"); ?></h1>
-        <ul class="hoidap">
-            <li class="post-item">
-                <a href="#">tri mun tai tham my vien em nghe noi la khong het se hoan tien, </a>
-            </li>
-            <li class="post-item">
-                <a href="#">tri mun tai tham my vien em nghe noi la khong het se hoan tien, </a>
-            </li>
-            <li class="post-item">
-                <a href="#">tri mun tai tham my vien em nghe noi la khong het se hoan tien, </a>
-            </li>
-            <li class="post-item">
-                <a href="#">tri mun tai tham my vien em nghe noi la khong het se hoan tien, </a>
-            </li>
-            <li class="post-item">
-                <a href="#">tri mun tai tham my vien em nghe noi la khong het se hoan tien, </a>
-            </li>
-            <li class="post-item">
-                <a href="#">tri mun tai tham my vien em nghe noi la khong het se hoan tien, </a>
-            </li>
-        </ul>
+        <div class="container-hoidap">
+            <div class="carousellite-hoidap">
+                <ul class="hoidap">
+                    <?php query_posts("orderby=DESC&showposts=15&post_type=question-and-answer"); ?>
+                    <?php if (have_posts()) : ?>
+                        <?php while (have_posts()) : the_post(); ?>
+                            <?php $sAnswer = get_field('_answer', $post->ID); ?>
+                            <?php if (!empty($sAnswer)) : ?>
+                                <li class="post-item-<?php echo $post->ID; ?>">
+                                    <a href="<?php the_permalink(); ?>"><?php echo angel_trim_content_words(15); ?></a>
+                                </li>
+                            <?php endif; ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php wp_reset_query(); ?>            
+                </ul>
+            </div>
+          </div>  
     </article>
     <span class="bg-bottom-sidebar"></span>
 </aside> <!--end of aside.side-bar-left-->
