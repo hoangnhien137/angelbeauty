@@ -1,7 +1,10 @@
 @font-face {
 		font-family: 'VNIAptima';
-		src: url('fonts/VAPTIMN.TTF');
+		src: url('fonts/VAVON.TTF');
 	}
-.wp-admin * {
+
+.menu-item .menu-item-settings .edit-menu-item-title,
+.menu-item-bar .menu-item-handle .item-title
+ {
 	font-family: 'VNIAptima';
 }
