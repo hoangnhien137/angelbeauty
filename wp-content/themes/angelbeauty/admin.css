@@ -1,15 +1,7 @@
 @font-face {
-		font-family: 'VNITimes';
-		src: url('fonts/VTIMESN.TTF');
+		font-family: 'VNIAptima';
+		src: url('fonts/VAPTIMN.TTF');
 	}
-	@font-face {
-    font-family: 'VNTArab';
-    src: url('fonts/VARABN_2.eot'); /* IE9 Compat Modes */
-    src: url('fonts/VARABN_2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('fonts/VARABN_2.woff') format('woff'), /* Modern Browsers */
-        url('fonts/VARABN_2.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('fonts/VARABN_2.svg#svgVNTArab') format('svg'); /* Legacy iOS */
-}
 .wp-admin * {
-	font-family: 'VNTArab';
+	font-family: 'VNIAptima';
 }
