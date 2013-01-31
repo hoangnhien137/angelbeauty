@@ -940,19 +940,16 @@ function language_selector_flags(){
 }
 
 
-function change_editor_font() {
-    echo "<style type='text/css'> 
-#editorcontainer textarea#content { 
-  background: #efefef; /* A darker background is better for eyes ;) */
-  font-family: Monaco, Consolas, \"Andale Mono\", \"Dejavu Sans Mono\", monospace; /* The best monospace font-family stack, i think */
-  font-size:14px; 
-  text-shadow:0px 0px 0px #444; /* Using it because i can */
-  color:#444; } 
-</style>";
+$admin_handle = 'mytheme_admin_stylesheet';
+$admin_stylesheet = get_template_directory_uri() . '/admin.css';
+wp_enqueue_style( $admin_handle, $admin_stylesheet );
+function mytheme_enqueue_admin_style() {
+    $admin_handle = 'mytheme_admin_stylesheet';
+     $admin_stylesheet = get_template_directory_uri() . '/admin.css';
+
+     wp_enqueue_style( $admin_handle, $admin_stylesheet );
 }
-
-#add_action("admin_print_styles", "change_editor_font");
-
+add_action('admin_print_styles', 'mytheme_enqueue_admin_style', 11 );
 
 
 add_action( 'admin_head-post.php', 'cwc_fix_html_editor_font' );
