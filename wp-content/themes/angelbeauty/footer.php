@@ -52,7 +52,7 @@ $sTemplateURL = get_template_directory_uri();
 
 <!--<script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/libs/all-libs.min.js"></script>-->
 <script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/plugins.js?v=1"></script>
-<script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/script.js?v=2.2"></script>
+<script type="text/javascript" src="<?php echo $sTemplateURL; ?>/js/script.js?v=2.5"></script>
 
 
 <?php wp_footer(); ?>

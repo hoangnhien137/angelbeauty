@@ -922,6 +922,9 @@ if ($isSubmitPost && $submitVerified) {
         #$location = currentPageURL();
         #wp_redirect($location);
         #exit;
+        $return = array('status' => true, 'post_id' => $postId, 'success' => 'I am Trinh!');
+        json_encode($return);
+        #var_dump($return);
     }
 }
 

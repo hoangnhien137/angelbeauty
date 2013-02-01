@@ -107,5 +107,18 @@ jQuery(document).ready(function($){
         speed: 1000
     });
     
+    var $form = $('form#new_post');
+    $form.bind('submit', function(ev) {
+        ev.preventDefault(); // <-- important
+        $(this).ajaxSubmit({
+			dataType: 'json',
+			success: function(jsonReq) {
+				console.log(jsonReq);
+                //alert(jsonReq);
+            }
+        });
+        return false;
+    });
+    
 
 });
