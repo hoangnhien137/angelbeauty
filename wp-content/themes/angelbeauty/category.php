@@ -35,7 +35,7 @@ global $post;
                         }
                     } ?>
                     
-                    <?php if ( 'hinh-anh' == $slugImg ) { ?>
+                    <?php if ( 'hinh-anh' == $slugImg || 'images' == $slugImg ) { ?>
                     
                     <ul class="view-list-post cat-images clearfix">
                         <?php $index = 0; ?>
@@ -43,13 +43,18 @@ global $post;
                             <?php while (have_posts()) : the_post(); ?>
                         <li class="item-post-<?php echo $post->ID; ?> <?php if ($index % 3 == 0) echo 'no-margin'; ?>">
                             <?php $index++; ?>
+                            <?php $sCustomThumb = get_field("_custom_thumbnail", $post->ID); ?>
                             <a href="<?php the_permalink(); ?>" class="thumbnail-post">
                                 <div>
-                                    <?php
-                                    if (has_post_thumbnail()) {
-                                        the_post_thumbnail('thumb-view-post');
-                                    }
-                                    ?>
+                                    <?php if (empty($sCustomThumb)) { ?>
+                                        <?php
+                                        if (has_post_thumbnail()) {
+                                            the_post_thumbnail('thumb-view-post');
+                                        }
+                                        ?>
+                                    <?php } else { ?>
+                                    <img width="150" height="150" class="wp-post-image-<?php echo $post->ID; ?>" src="<?php echo $sCustomThumb; ?>">
+                                    <?php } ?>
                                 </div>
                                 <h1><?php echo angel_trim_title_words(4); ?></h1>    
                             </a>
@@ -66,12 +71,17 @@ global $post;
                             <?php while (have_posts()) : the_post(); ?>
                         <li class="item-post-<?php echo $post->ID; ?> <?php if ($iIndex % 4 == 0) echo 'no-margin'; ?>">
                             <?php $iIndex++; ?>
+                            <?php $sCustomThumb2 = get_field("_custom_thumbnail", $post->ID); ?>
                             <a href="<?php the_permalink(); ?>" class="thumbnail-post">
+                                <?php if (empty($sCustomThumb2)) { ?>
                                 <?php
                                     if (has_post_thumbnail()) {
                                         the_post_thumbnail('thumb-view-post');
                                     }
                                     ?>
+                                <?php } else { ?>
+                                <img width="145" height="150" class="wp-post-image-<?php echo $post->ID; ?>" src="<?php echo $sCustomThumb2; ?>">
+                                <?php } ?>
                                 <h1><?php the_title(); ?></h1>
                             </a>
                         </li>
@@ -87,13 +97,18 @@ global $post;
                             <?php while (have_posts()) : the_post(); ?>
                         <li class="item-post-<?php echo $post->ID; ?> <?php if ($index % 2 == 0) echo 'no-margin'; ?>">
                             <?php $index++; ?>
+                            <?php $sCustomThumb3 = get_field("_custom_thumbnail", $post->ID); ?>
                             <a href="<?php the_permalink(); ?>" class="thumbnail-post">
                                 <div>
+                                    <?php if (empty($sCustomThumb3)) { ?>
                                     <?php
                                     if (has_post_thumbnail()) {
                                         the_post_thumbnail('thumb-view-post');
                                     }
                                     ?>
+                                    <?php } else { ?>
+                                    <img width="200" height="170" class="wp-post-image-<?php echo $post->ID; ?>" src="<?php echo $sCustomThumb3; ?>">
+                                    <?php } ?>
                                 </div>
                                 <h1><?php echo angel_trim_title_words(8); ?></h1>    
                             </a>
@@ -109,12 +124,18 @@ global $post;
                             <?php if (have_posts()) : ?>
                             <?php while (have_posts()) : the_post(); ?>
                             <li class="item-post-<?php echo $post->ID; ?> clearfix">
+                                <?php $sCustomThumb4 = get_field("_custom_thumbnail", $post->ID); ?>
                                 <a href="<?php the_permalink(); ?>" class="thumbnail-post">
+                                    <?php if (empty($sCustomThumb4)) { ?>
                                     <?php
                                     if (has_post_thumbnail()) {
                                         the_post_thumbnail('thumb-view-post');
                                     }
-                                    ?></a>
+                                    ?>
+                                    <?php } else { ?>
+                                    <img width="200" height="170" class="wp-post-image-<?php echo $post->ID; ?>" src="<?php echo $sCustomThumb4; ?>">
+                                    <?php } ?>
+                                </a>
                                 <div class="main-post">
                                     <a href="<?php the_permalink(); ?>" class="title-post"><h2><?php the_title(); ?></h2></a>
                                     <div class="content-post">
