@@ -70,10 +70,20 @@ global $sTemplateURL, $post;
             <?php while (have_posts()) : the_post(); ?>
             <li class="post-item-<?php echo $post->ID; ?>">
                 <a href="<?php the_permalink(); ?>">
+						<?php $sCustomThumb4 = get_field("_custom_thumbnail", $post->ID); ?>
+						<?php if (empty($sCustomThumb4)) { ?>
+							<?php
+							if (has_post_thumbnail()) {
+								the_post_thumbnail('thumb-cat-mini');
+							}
+							?>
+						<?php } else { ?>
+							<img width="200" height="170" class="wp-post-image-<?php echo $post->ID; ?>" src="<?php echo $sCustomThumb4; ?>">
+							<?php } ?>
                         <?php
-                        if (has_post_thumbnail()) {
-                            the_post_thumbnail('thumb-cat-mini');
-                        }
+                        //if (has_post_thumbnail()) {
+                         //   the_post_thumbnail('thumb-cat-mini');
+                        //}
                         ?></a>
                 <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
             </li>
@@ -89,10 +99,20 @@ global $sTemplateURL, $post;
             <?php while (have_posts()) : the_post(); ?>
             <li class="post-item-<?php echo $post->ID; ?>">
                 <a href="<?php the_permalink(); ?>">
+					<?php $sCustomThumb4 = get_field("_custom_thumbnail", $post->ID); ?>
+					<?php if (empty($sCustomThumb4)) { ?>
+						<?php
+						if (has_post_thumbnail()) {
+							the_post_thumbnail('thumb-cat-mini');
+						}
+						?>
+					<?php } else { ?>
+						<img width="200" height="170" class="wp-post-image-<?php echo $post->ID; ?>" src="<?php echo $sCustomThumb4; ?>">
+					<?php } ?>
                         <?php
-                        if (has_post_thumbnail()) {
-                            the_post_thumbnail('thumb-cat-mini');
-                        }
+                        //if (has_post_thumbnail()) {
+                        //    the_post_thumbnail('thumb-cat-mini');
+                        //}
                         ?></a>
                 <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
             </li>

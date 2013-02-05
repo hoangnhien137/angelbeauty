@@ -32,28 +32,47 @@ global $post;
                 
                 
                 
-                <?php if ( 'hinh-anh' == $slug ) { ?>
-                
-                    <?php $aListImg = get_field('_hoat_dong_hinh_anh', $post->ID); ?>
-                    <?php if (!empty($aListImg)) { ?>
+                <?php if ( 'hinh-anh' == $slug || 'images' == $slug ) { ?>
+					<?php $aListImg = get_field('_hoat_dong_hinh_anh', $post->ID); ?>
+					<?php $sOldAlbum = get_field('_old_album',$post->ID); ?>
+                    <?php if (!empty($aListImg)): ?>
 
                         <article class="list-img-post">
+							
                             <ul class="clearfix">
                                 <?php $iCount = 0; ?>
                                 <?php if (have_posts()) : ?>
                                 <?php while (have_posts()) : the_post(); ?>
-                                <?php foreach ($aListImg as $listImg) : ?>
-                                    <li <?php if ($iCount % 4 == 0) echo 'class="li-no-margin"'; ?>>
-                                        <a class="show-img-post" href="<?php echo $listImg['_hinh_anh']; ?>"><img src="<?php echo $listImg['_hinh_anh']; ?>" alt="<?php the_title(); ?>" ></a>
-                                    </li>
-                                    <?php $iCount++; ?>
-                                <?php endforeach; ?>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
+									<?php foreach ($aListImg as $listImg) : ?>
+										<li <?php if ($iCount % 4 == 0) echo 'class="li-no-margin"'; ?>>
+											<a class="show-img-post" href="<?php echo $listImg['_hinh_anh']; ?>"><img src="<?php echo $listImg['_hinh_anh']; ?>" alt="<?php the_title(); ?>" ></a>
+										</li>
+										<?php $iCount++; ?>
+									<?php endforeach; ?>	
+								<?php endwhile; ?>
+								<?php endif; ?>
                             </ul>
                         </article>
-
-                    <?php } ?>
+					<?php elseif(!empty($sOldAlbum)): ?>
+						<?php $aOldAlbum = json_decode($sOldAlbum); ?>
+						<article class="list-img-post">
+							<ul class="clearfix">
+								<?php $iCount = 0; ?>
+								<?php foreach($aOldAlbum as $sImgUrl ): ?>
+                                <li <?php if ($iCount % 4 == 0) echo 'class="li-no-margin"'; ?>>
+									<a class="show-img-post" href="<?php echo $sImgUrl; ?>">
+									<!--
+									<img src="<?php bloginfo('template_directory'); ?>/public/timthumb.php&src=<?php echo $sImgUrl; ?>&h=30&w=50" alt="img" >
+									-->
+									<img src="<?php bloginfo('stylesheet_directory'); ?>/includes/timthumb.php?src=<?php echo $sImgUrl?>&w=150&h=150" border="0" />
+									
+									</a>
+								</li>
+								<?php $iCount++; ?>
+								<?php endforeach; ?>
+							</ul>
+                        </article>
+					<?php endif; ?>
                 
                 <?php } elseif ('video' == $slug ) { ?>
                 
