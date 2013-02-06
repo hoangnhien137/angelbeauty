@@ -133,7 +133,7 @@ global $post;
                                     }
                                     ?>
                                     <?php } else { ?>
-                                    <img width="200" height="170" class="wp-post-image-<?php echo $post->ID; ?>" src="<?php echo $sCustomThumb4; ?>">
+                                    <img width="60" height="50" class="wp-post-image-<?php echo $post->ID; ?>" src="<?php echo $sCustomThumb4; ?>">
                                     <?php } ?>
                                 </a>
                                 <div class="main-post">

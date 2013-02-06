@@ -26,11 +26,11 @@ global $post;
                                     </div>
                                     <div class="format-send clearfix">
                                         <p class="time-send">
-                                            <label><?php _e("Gửi ngày: ") ?></label>
+                                            <label><?php _e("G?i ng�y: ") ?></label>
                                             <span><?php echo get_post_meta($post->ID, 'time_type', true) ?></span>
                                         </p>
                                         <p class="author-send">
-                                            <label><?php _e("bởi: ") ?></label>
+                                            <label><?php _e("b?i: ") ?></label>
                                             <span><?php the_title(); ?></span>
                                         </p>
                                         <div class="email-send">
@@ -52,7 +52,7 @@ global $post;
                         <form id="new_post"<?php do_action('post_edit_form_tag'); ?> name="new_q_a" method="post" action="" class="">
                             <?php endif; ?>
                             <p class="question-name clearfix">
-                                <label><?php _e("Họ tên") ?></label>
+                                <label><?php _e("H? t�n") ?></label>
                                 <input name="post_name_type" class="post-name" type="text" required="required" placeholder="<?php _e('Name');?>" value=""/>
                             </p>
                             <p class="question-email clearfix">
@@ -60,11 +60,11 @@ global $post;
                                 <input name="post_email_type" class="post-email" type="text" required="required" placeholder="<?php _e('Email');?>" value=""/>
                             </p>
                             <p class="question-message clearfix">
-                                <label><?php _e("Câu hỏi") ?></label>
+                                <label><?php _e("C�u h?i") ?></label>
                                 <textarea name="post_message_type" class="post-email" type="" required="required" placeholder="<?php _e('Message');?>" value=""/></textarea>
                             </p>
                             <div id="button-submit">
-                                <input type="submit" class="upload" name="submit" value="Gửi"/>
+                                <input type="submit" class="upload" name="submit" value="G?i"/>
                                 <input id="post_id" name="post_id" value="" type="hidden" />
                             </div>
                             <?php wp_nonce_field('new-post'); ?>

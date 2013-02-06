@@ -35,7 +35,7 @@ global $post;
                                     <div class="format-send clearfix">
                                         <p class="time-send">
                                             <label><?php _e("Gửi ngày: ") ?></label>
-                                            <span><?php echo get_post_meta($post->ID, 'time_type', true) ?></span>
+                                            <span><?php the_date('d/m/Y'); ?></span>
                                         </p>
                                         <p class="author-send">
                                             <label><?php _e("bởi: ") ?></label>
