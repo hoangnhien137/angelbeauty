@@ -477,8 +477,6 @@ function angel_trim_content_words( $iNumberWords = 80, $sMore = ' ...', $iLength
     return wp_trim_words_length($sContent, $iNumberWords, $sMore, $iLength );
 }
 
-
-
 if (!function_exists('html5blp_comment')) :
 
     function html5blp_comment($comment, $args, $depth) {
@@ -587,6 +585,7 @@ if (function_exists('add_image_size')) {
     add_image_size('thumb-products-cat', 199, 142, false); //(no cropped)
     add_image_size('thumb-view-post', 200, 170, false); //(no cropped)
     add_image_size('thumb-cat-mini', 60, 50, false); //(no cropped)
+    add_image_size('thumb-post-related', 150, 150, false); //(no cropped)
 }
 
 // Display 12 products per page

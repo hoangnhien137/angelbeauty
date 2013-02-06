@@ -1847,7 +1847,7 @@ article.comment-single h2#comments-title {
   font-size: 14px;
   line-height: 30px;
   font-weight: bold;
-  height: 30px;
+  height: auto;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -1901,6 +1901,11 @@ article.comment-single form#commentform > p {
 
 article.comment-single form#commentform > p label {
     padding-right: 10px;
+    display: block;
+}
+
+article.comment-single form#commentform > p label > span {
+    color: #ff0000;
 }
 
 article.comment-single form#commentform > p > textarea,
@@ -1913,7 +1918,8 @@ article.comment-single form#commentform > p > input {
     -moz-border-radius: 3px;
     border-style: solid;
     border-width: 1px;
-    padding-left: 5px;
+    padding: 5px;
+    width: 300px;
 }
 
 article.comment-single form#commentform > p > textarea {
@@ -1921,7 +1927,11 @@ article.comment-single form#commentform > p > textarea {
     color: #593C09;
     font-family: Tahoma,Geneva,sans-serif;
     font-size: 12px;
-    width: 450px;
+    width: 645px;
+}
+
+article.comment-single form#commentform > p > input#submit {
+    width: 60px;
 }
 
 input[type="text"], input[type="password"], textarea {
@@ -2311,7 +2321,55 @@ div.admin-answer {
     font-size: 13px;
 }
 
+/*_____________RELATED CALL___________*/
+article.template-call-related > ul {
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 0px;
+}
 
+article.template-call-related > ul > li:first-child {
+    margin-left: 0px;
+}
+
+article.template-call-related > ul > li {
+    width: 150px;
+    height: 220px;
+    margin: 0 0px 15px 15px;
+    float: left;
+}
+
+article.template-call-related > ul > li > a {
+    display: block;
+    width: 150px;
+    height: 220px;
+}
+
+article.template-call-related > ul > li > a > img {
+    width: 150px;
+    height: 150px;
+}
+
+article.template-call-related > ul > li > a > h2 {
+    width: 150px;
+    height: 70px;
+    overflow: hidden;
+    text-transform: uppercase;
+    color: #593C09;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    padding-top: 10px;
+    text-align: center;
+} 
+
+article.template-call-related > ul > li > a:hover > h2 {
+    text-decoration: underline;
+}
+
+
+
+/*_____________END RELATED CALL___________*/
 
 /* ==========================================================================
    Helper classes

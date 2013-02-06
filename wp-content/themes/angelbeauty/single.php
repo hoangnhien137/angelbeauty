@@ -74,8 +74,7 @@ global $post;
                         </article>
 					<?php endif; ?>
                 
-                <?php } elseif ('video' == $slug ) { ?>
-                
+                <?php } elseif ('video' == $slug || 'video-vi' == $slug ) { ?>
                 <?php $aListVideo = get_field('_link_of_video_clip', $post->ID); ?>
                     <?php if (!empty($aListVideo)) { ?>
                 
