@@ -32,7 +32,7 @@ global $post;
                 
                 
                 
-                <?php if ( 'hinh-anh' == $slug ) { ?>
+                <?php if ( 'hinh-anh' == $slug || 'images' == $slug ) { ?>
                 
                     <?php $aListImg = get_field('_hoat_dong_hinh_anh', $post->ID); ?>
                     <?php if (!empty($aListImg)) { ?>

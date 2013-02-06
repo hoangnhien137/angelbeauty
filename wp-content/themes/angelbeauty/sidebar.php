@@ -106,7 +106,7 @@ global $sTemplateURL, $post;
         <div class="container-hoidap">
             <div class="carousellite-hoidap">
                 <ul class="hoidap">
-                    <?php query_posts("orderby=DESC&showposts=15&post_type=question-and-answer"); ?>
+                    <?php $sql = query_posts("orderby=DESC&showposts=15&post_type=question-and-answer"); ?>
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
                             <?php $sAnswer = get_field('_answer', $post->ID); ?>
